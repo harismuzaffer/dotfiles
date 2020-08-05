@@ -1,0 +1,3 @@
+[submodule "vim/.vim/pack"]
+	path = vim/.vim/pack
+	url = git@github.com:harismuzaffer/vim-packs.git
