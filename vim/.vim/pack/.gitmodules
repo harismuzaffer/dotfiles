@@ -1,0 +1,15 @@
+[submodule "plugins/start/ctrlp"]
+	path = plugins/start/ctrlp
+	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "syntax/start/ale"]
+	path = syntax/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "plugins/start/airline"]
+	path = plugins/start/airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "syntax/start/python-pep8-indent"]
+	path = syntax/start/python-pep8-indent
+	url = git@github.com:Vimjas/vim-python-pep8-indent.git
+[submodule "syntax/start/auto-pairs"]
+	path = syntax/start/auto-pairs
+	url = git@github.com:jiangmiao/auto-pairs.git
