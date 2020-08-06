@@ -1,3 +1,0 @@
-[submodule "vim/.vim/pack/colors/start/vim-rainbow"]
-	path = vim/.vim/pack/colors/start/vim-rainbow
-	url = git@github.com:junegunn/rainbow_parentheses.vim.git
