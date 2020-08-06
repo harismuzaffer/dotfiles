@@ -1,5 +1,8 @@
 let mapleader=','
 
+"for vim 8.2 on mac, delete key doesnt delete the previously written text
+set backspace=indent,eol,start
+
 "when changing buffer, hide the current buffer rather than throwing it away
 set hidden
 
