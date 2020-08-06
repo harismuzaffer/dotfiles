@@ -1,0 +1,6 @@
+[submodule "vim/.vim/pack/syntax/start/tagbar"]
+	path = vim/.vim/pack/syntax/start/tagbar
+	url = git@github.com:majutsushi/tagbar.git
+[submodule "vim/.vim/pack/plugins/fzf"]
+	path = vim/.vim/pack/plugins/fzf
+	url = git@github.com:junegunn/fzf.vim.git
