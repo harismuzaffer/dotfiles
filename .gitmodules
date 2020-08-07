@@ -10,9 +10,6 @@
 [submodule "vim/.vim/pack/plugins/start/ack"]
 	path = vim/.vim/pack/plugins/start/ack
 	url = git@github.com:mileszs/ack.vim.git
-[submodule "vim/.vim/pack/plugins/start/gutentags"]
-	path = vim/.vim/pack/plugins/start/gutentags
-	url = git@github.com:ludovicchabant/vim-gutentags.git
 [submodule "vim/.vim/pack/syntax/start/anyjump"]
 	path = vim/.vim/pack/syntax/start/anyjump
 	url = git@github.com:pechorin/any-jump.vim.git
