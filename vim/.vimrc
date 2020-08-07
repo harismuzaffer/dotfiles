@@ -40,9 +40,10 @@ set path=.,,**
 "syntax highlighting
 syntax on
 
-"CtrlP plugin settings - use ripgrep as search program(default is usually grep)
+"CtrlP and ack.vim settings - use ripgrep as search program(default is usually grep)
 if executable('rg')
   let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
+  let g:ackprg = 'rg --vimgrep'
 endif
 "always start CtrlP with the current directory
 let g:ctrlp_cmd='CtrlP :pwd'
@@ -128,3 +129,9 @@ map <silent> <Leader>p :qa<CR><CR>
 autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
 
 let g:ale_completion_enabled = 1
+
+" required for fzf
+set rtp+=/usr/local/opt/fzf
+
+"to toggle tags window
+nmap <F8> :TagbarToggle<CR>
