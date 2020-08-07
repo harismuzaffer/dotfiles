@@ -1,3 +1,18 @@
 [submodule "vim/.vim/pack/syntax/start/tagbar"]
 	path = vim/.vim/pack/syntax/start/tagbar
 	url = git@github.com:majutsushi/tagbar.git
+[submodule "vim/.vim/pack/plugins/start/fzf"]
+	path = vim/.vim/pack/plugins/start/fzf
+	url = git@github.com:junegunn/fzf.vim.git
+[submodule "vim/.vim/pack/plugins/start/ctrlsf"]
+	path = vim/.vim/pack/plugins/start/ctrlsf
+	url = git@github.com:dyng/ctrlsf.vim.git
+[submodule "vim/.vim/pack/plugins/start/ack"]
+	path = vim/.vim/pack/plugins/start/ack
+	url = git@github.com:mileszs/ack.vim.git
+[submodule "vim/.vim/pack/plugins/start/gutentags"]
+	path = vim/.vim/pack/plugins/start/gutentags
+	url = git@github.com:ludovicchabant/vim-gutentags.git
+[submodule "vim/.vim/pack/syntax/start/anyjump"]
+	path = vim/.vim/pack/syntax/start/anyjump
+	url = git@github.com:pechorin/any-jump.vim.git
