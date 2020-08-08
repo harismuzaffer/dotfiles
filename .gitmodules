@@ -19,6 +19,3 @@
 [submodule "vim/.vim/pack/plugins/start/codi"]
 	path = vim/.vim/pack/plugins/start/codi
 	url = git@github.com:metakirby5/codi.vim.git
-[submodule "vim/.vim/pack/plugins/start/vimcompletesme"]
-	path = vim/.vim/pack/plugins/start/vimcompletesme
-	url = git@github.com:ajh17/VimCompletesMe.git
