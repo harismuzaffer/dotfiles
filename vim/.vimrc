@@ -135,3 +135,22 @@ set rtp+=/usr/local/opt/fzf
 
 "to toggle tags window
 nmap <F8> :TagbarToggle<CR>
+
+"for gutentags, exlcude these file types
+let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.yml', '*.json', '*.scss', '*.less', 'node_modules']
+let g:gutentags_cache_dir = '~/code/gutentags'
+
+"go to definition with ctrlp
+map <silent> <leader>jd :CtrlPTag<cr><c-\>w
+
+"go to def using fzf tags
+nnoremap <silent> <Leader>gd :Tags <C-R><C-W><CR>
+
+"find the word under cursor in all files
+nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
+
+"tags in the budder
+nnoremap <leader>tb :BTags<CR>
+
+"tags in the project
+nnoremap <leader>tp :Tags<CR>
