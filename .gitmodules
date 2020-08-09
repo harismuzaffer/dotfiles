@@ -22,6 +22,3 @@
 [submodule "vim/.vim/pack/plugins/start/vimsimplecomplete"]
 	path = vim/.vim/pack/plugins/start/vimsimplecomplete
 	url = git@github.com:maxboisvert/vim-simple-complete.git
-[submodule "vim/.vim/pack/plugins/start/ctrlfunky"]
-	path = vim/.vim/pack/plugins/start/ctrlfunky
-	url = git@github.com:tacahiroy/ctrlp-funky.git
