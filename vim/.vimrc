@@ -154,3 +154,6 @@ nnoremap <leader>tb :BTags<CR>
 
 "tags in the project
 nnoremap <leader>tp :Tags<CR>
+
+"prevent completion from tags and included files
+set complete=.

@@ -19,3 +19,6 @@
 [submodule "vim/.vim/pack/plugins/start/codi"]
 	path = vim/.vim/pack/plugins/start/codi
 	url = git@github.com:metakirby5/codi.vim.git
+[submodule "vim/.vim/pack/plugins/start/vimsimplecomplete"]
+	path = vim/.vim/pack/plugins/start/vimsimplecomplete
+	url = git@github.com:maxboisvert/vim-simple-complete.git
