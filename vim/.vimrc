@@ -128,7 +128,7 @@ map <silent> <Leader>p :qa<CR><CR>
 
 autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
 
-let g:ale_completion_enabled = 1
+"let g:ale_completion_enabled = 1
 
 " required for fzf
 set rtp+=/usr/local/opt/fzf
@@ -157,3 +157,6 @@ nnoremap <leader>tp :Tags<CR>
 
 "prevent completion from tags and included files
 set complete=.
+
+"for deoplete
+let g:deoplete#enable_at_startup = 1
