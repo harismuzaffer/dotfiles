@@ -28,6 +28,3 @@
 [submodule "vim/.vim/pack/syntax/start/deoplete"]
 	path = vim/.vim/pack/syntax/start/deoplete
 	url = git@github.com:Shougo/deoplete.nvim.git
-[submodule "vim/.vim/pack/syntax/start/jedi"]
-	path = vim/.vim/pack/syntax/start/jedi
-	url = git@github.com:davidhalter/jedi.git
