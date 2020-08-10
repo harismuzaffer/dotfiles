@@ -19,3 +19,15 @@
 [submodule "vim/.vim/pack/plugins/start/codi"]
 	path = vim/.vim/pack/plugins/start/codi
 	url = git@github.com:metakirby5/codi.vim.git
+[submodule "vim/.vim/pack/syntax/start/neovimrpc"]
+	path = vim/.vim/pack/syntax/start/neovimrpc
+	url = git@github.com:roxma/vim-hug-neovim-rpc.git
+[submodule "vim/.vim/pack/plugins/start/nvim-yarp"]
+	path = vim/.vim/pack/plugins/start/nvim-yarp
+	url = git@github.com:roxma/nvim-yarp.git
+[submodule "vim/.vim/pack/syntax/start/deoplete"]
+	path = vim/.vim/pack/syntax/start/deoplete
+	url = git@github.com:Shougo/deoplete.nvim.git
+[submodule "vim/.vim/pack/syntax/start/jedi"]
+	path = vim/.vim/pack/syntax/start/jedi
+	url = git@github.com:davidhalter/jedi.git
