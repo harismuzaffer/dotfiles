@@ -31,6 +31,3 @@
 [submodule "vim/.vim/pack/plugins/start/airline"]
 	path = vim/.vim/pack/plugins/start/airline
 	url = git@github.com:vim-airline/vim-airline.git
-[submodule "vim/.vim/pack/syntax/start/tabnine"]
-	path = vim/.vim/pack/syntax/start/tabnine
-	url = https://github.com/zxqfl/tabnine-vim
