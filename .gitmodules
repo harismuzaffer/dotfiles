@@ -25,6 +25,9 @@
 [submodule "vim/.vim/pack/plugins/start/nvim-yarp"]
 	path = vim/.vim/pack/plugins/start/nvim-yarp
 	url = git@github.com:roxma/nvim-yarp.git
-[submodule "vim/.vim/pack/syntax/start/deoplete"]
-	path = vim/.vim/pack/syntax/start/deoplete
-	url = git@github.com:Shougo/deoplete.nvim.git
+[submodule "vim/.vim/pack/syntax/start/deoplete-jedi"]
+	path = vim/.vim/pack/syntax/start/deoplete-jedi
+	url = git@github.com:deoplete-plugins/deoplete-jedi.git
+[submodule "vim/.vim/pack/plugins/start/airline"]
+	path = vim/.vim/pack/plugins/start/airline
+	url = git@github.com:vim-airline/vim-airline.git
