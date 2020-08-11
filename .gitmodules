@@ -34,3 +34,6 @@
 [submodule "vim/.vim/pack/syntax/start/lsc"]
 	path = vim/.vim/pack/syntax/start/lsc
 	url = git@github.com:natebosch/vim-lsc.git
+[submodule "vim/.vim/pack/plugins/start/python-mode"]
+	path = vim/.vim/pack/plugins/start/python-mode
+	url = git@github.com:python-mode/python-mode.git
