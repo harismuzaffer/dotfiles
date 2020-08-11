@@ -158,6 +158,16 @@ nnoremap <leader>tp :Tags<CR>
 "prevent completion from tags and included files
 set complete=.
 
+"set complete options
+"set completeopt=menu,menuone,noinsert
+
 "for deoplete
 "let g:deoplete#enable_at_startup = 1
 
+"mapping language server.. needed for lsc
+let g:lsc_server_commands = {'python': 'pyls'}
+" Setting a value to a blank string leaves that command unmapped:
+let g:lsc_auto_map = {'defaults': v:true, 'PreviousReference': ''}
+
+"turn off disgonistics from lsc
+let g:lsc_enable_diagnostics=v:false

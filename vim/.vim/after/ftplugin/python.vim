@@ -11,3 +11,5 @@ set softtabstop=4
 
 "When indenting using >, < or =, how much to shift
 set shiftwidth=4
+
+set completeopt=menu,menuone,noinsert
