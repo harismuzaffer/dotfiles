@@ -40,3 +40,15 @@
 [submodule "vim/.vim/pack/colors/start/solarized"]
 	path = vim/.vim/pack/colors/start/solarized
 	url = git@github.com:lifepillar/vim-solarized8.git
+[submodule "vim/.vim/pack/colors/start/badwolf"]
+	path = vim/.vim/pack/colors/start/badwolf
+	url = git@github.com:sjl/badwolf.git
+[submodule "vim/.vim/pack/syntax/start/asyncomplete"]
+	path = vim/.vim/pack/syntax/start/asyncomplete
+	url = git@github.com:prabirshrestha/asyncomplete.vim.git
+[submodule "vim/.vim/pack/syntax/start/vimlsp"]
+	path = vim/.vim/pack/syntax/start/vimlsp
+	url = git@github.com:prabirshrestha/vim-lsp.git
+[submodule "vim/.vim/pack/syntax/start/asynccompletelsp"]
+	path = vim/.vim/pack/syntax/start/asynccompletelsp
+	url = git@github.com:prabirshrestha/asyncomplete-lsp.vim.git
