@@ -160,6 +160,7 @@ set complete=.
 
 "set complete options
 "set completeopt=menu,menuone,noinsert
+set completeopt-=preview
 
 "for deoplete
 "let g:deoplete#enable_at_startup = 1
@@ -171,3 +172,7 @@ let g:lsc_auto_map = {'defaults': v:true, 'PreviousReference': ''}
 
 "turn off disgonistics from lsc
 let g:lsc_enable_diagnostics=v:false
+
+
+set background=dark
+colorscheme solarized8
