@@ -61,6 +61,3 @@
 [submodule "vim/.vim/pack/plugins/start/vimclap"]
 	path = vim/.vim/pack/plugins/start/vimclap
 	url = git@github.com:liuchengxu/vim-clap.git
-[submodule "vim/.vim/pack/plugins/start/agit"]
-	path = vim/.vim/pack/plugins/start/agit
-	url = git@github.com:cohama/agit.vim.git
