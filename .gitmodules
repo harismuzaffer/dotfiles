@@ -55,3 +55,12 @@
 [submodule "vim/.vim/pack/syntax/start/deoplete"]
 	path = vim/.vim/pack/syntax/start/deoplete
 	url = git@github.com:Shougo/deoplete.nvim.git
+[submodule "vim/.vim/pack/plugins/start/vistavim"]
+	path = vim/.vim/pack/plugins/start/vistavim
+	url = git@github.com:liuchengxu/vista.vim.git
+[submodule "vim/.vim/pack/plugins/start/vimclap"]
+	path = vim/.vim/pack/plugins/start/vimclap
+	url = git@github.com:liuchengxu/vim-clap.git
+[submodule "vim/.vim/pack/plugins/start/agit"]
+	path = vim/.vim/pack/plugins/start/agit
+	url = git@github.com:cohama/agit.vim.git
