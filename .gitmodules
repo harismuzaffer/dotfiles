@@ -52,3 +52,6 @@
 [submodule "vim/.vim/pack/syntax/start/asynccompletelsp"]
 	path = vim/.vim/pack/syntax/start/asynccompletelsp
 	url = git@github.com:prabirshrestha/asyncomplete-lsp.vim.git
+[submodule "vim/.vim/pack/syntax/start/deoplete"]
+	path = vim/.vim/pack/syntax/start/deoplete
+	url = git@github.com:Shougo/deoplete.nvim.git
