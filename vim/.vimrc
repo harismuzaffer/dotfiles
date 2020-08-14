@@ -160,19 +160,80 @@ set complete=.
 
 "set complete options
 "set completeopt=menu,menuone,noinsert
-set completeopt-=preview
+set completeopt=menu,menuone,noinsert
 
 "for deoplete
-"let g:deoplete#enable_at_startup = 1
+"set rtp+=/Users/mammoth/dotfiles/vim/.vim/pack/syntax/start/deoplete
+let g:deoplete#enable_at_startup = 1
 
 "mapping language server.. needed for lsc
-let g:lsc_server_commands = {'python': 'pyls'}
+"let g:lsc_server_commands = {'python': 'pyls', 'javascript': 'typescript-language-server --stdio'}
 " Setting a value to a blank string leaves that command unmapped:
-let g:lsc_auto_map = {'defaults': v:true, 'PreviousReference': ''}
+"let g:lsc_auto_map = {'defaults': v:true, 'PreviousReference': ''}
 
 "turn off disgonistics from lsc
 let g:lsc_enable_diagnostics=v:false
 
+colorscheme badwolf
 
-set background=dark
-colorscheme solarized8
+
+" for vimlsp and asyncomplete
+if executable('pyls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pyls',
+        \ 'cmd': {server_info->['pyls']},
+        \ 'allowlist': ['python'],
+        \ })
+endif
+
+
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
+
+    " refer to doc to add more commands
+endfunction
+
+
+" allow modifying the completeopt variable, or it will
+" be overridden all the time
+let g:asyncomplete_auto_completeopt = 0
+
+
+"for lsc
+let g:asyncomplete_auto_popup = 0
+function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ asyncomplete#force_refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+
+" Write this in your vimrc file
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 0
+" You can disable this option too
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
+
