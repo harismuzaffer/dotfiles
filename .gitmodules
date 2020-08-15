@@ -79,6 +79,3 @@
 [submodule "vim/.vim/pack/colors/start/oceanic"]
 	path = vim/.vim/pack/colors/start/oceanic
 	url = git@github.com:mhartington/oceanic-next.git
-[submodule "vim/.vim/pack/plugins/start/vimagit"]
-	path = vim/.vim/pack/plugins/start/vimagit
-	url = git@github.com:jreybert/vimagit.git
