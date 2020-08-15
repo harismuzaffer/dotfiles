@@ -67,3 +67,6 @@
 [submodule "vim/.vim/pack/colors/start/hybrid"]
 	path = vim/.vim/pack/colors/start/hybrid
 	url = git@github.com:w0ng/vim-hybrid.git
+[submodule "vim/.vim/pack/syntax/start/vimpolygot"]
+	path = vim/.vim/pack/syntax/start/vimpolygot
+	url = git@github.com:sheerun/vim-polyglot.git
