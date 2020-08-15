@@ -67,3 +67,12 @@
 [submodule "vim/.vim/pack/colors/start/hybrid"]
 	path = vim/.vim/pack/colors/start/hybrid
 	url = git@github.com:w0ng/vim-hybrid.git
+[submodule "vim/.vim/pack/colors/start/flattened"]
+	path = vim/.vim/pack/colors/start/flattened
+	url = git@github.com:romainl/flattened.git
+[submodule "vim/.vim/pack/colors/start/jellybeans"]
+	path = vim/.vim/pack/colors/start/jellybeans
+	url = git@github.com:nanotech/jellybeans.vim.git
+[submodule "vim/.vim/pack/colors/start/luna"]
+	path = vim/.vim/pack/colors/start/luna
+	url = git@github.com:notpratheek/vim-luna.git
