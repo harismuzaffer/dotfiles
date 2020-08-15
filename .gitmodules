@@ -73,3 +73,6 @@
 [submodule "vim/.vim/pack/colors/start/jellybeans"]
 	path = vim/.vim/pack/colors/start/jellybeans
 	url = git@github.com:nanotech/jellybeans.vim.git
+[submodule "vim/.vim/pack/colors/start/oldbook"]
+	path = vim/.vim/pack/colors/start/oldbook
+	url = git@github.com:KKPMW/oldbook-vim.git
