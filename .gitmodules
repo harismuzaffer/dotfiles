@@ -76,6 +76,3 @@
 [submodule "vim/.vim/pack/colors/start/gruv"]
 	path = vim/.vim/pack/colors/start/gruv
 	url = git@github.com:morhetz/gruvbox.git
-[submodule "vim/.vim/pack/colors/start/dracula"]
-	path = vim/.vim/pack/colors/start/dracula
-	url = git@github.com:dracula/vim.git
