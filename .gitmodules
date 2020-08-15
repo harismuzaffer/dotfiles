@@ -61,9 +61,6 @@
 [submodule "vim/.vim/pack/plugins/start/vimclap"]
 	path = vim/.vim/pack/plugins/start/vimclap
 	url = git@github.com:liuchengxu/vim-clap.git
-[submodule "vim/.vim/pack/syntax/start/vimpolygot"]
-	path = vim/.vim/pack/syntax/start/vimpolygot
-	url = git@github.com:sheerun/vim-polyglot.git
 [submodule "vim/.vim/pack/plugins/start/fugitive"]
 	path = vim/.vim/pack/plugins/start/fugitive
 	url = git@github.com:tpope/vim-fugitive.git
