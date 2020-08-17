@@ -79,3 +79,24 @@
 [submodule "vim/.vim/pack/colors/start/oceanic"]
 	path = vim/.vim/pack/colors/start/oceanic
 	url = git@github.com:mhartington/oceanic-next.git
+[submodule "vim/.vim/pack/plugins/start/gitgutter"]
+	path = vim/.vim/pack/plugins/start/gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
+[submodule "vim/.vim/pack/plugins/start/gvvim"]
+	path = vim/.vim/pack/plugins/start/gvvim
+	url = git@github.com:junegunn/gv.vim.git
+[submodule "vim/.vim/pack/plugins/start/vimgitlog"]
+	path = vim/.vim/pack/plugins/start/vimgitlog
+	url = git@github.com:kablamo/vim-git-log.git
+[submodule "vim/.vim/pack/plugins/start/agit"]
+	path = vim/.vim/pack/plugins/start/agit
+	url = git@github.com:cohama/agit.vim.git
+[submodule "vim/.vim/pack/plugins/start/git-timalapse"]
+	path = vim/.vim/pack/plugins/start/git-timalapse
+	url = git@github.com:junkblocker/git-time-lapse.git
+[submodule "vim/.vim/pack/plugins/start/vimagit"]
+	path = vim/.vim/pack/plugins/start/vimagit
+	url = git@github.com:jreybert/vimagit.git
+[submodule "vim/.vim/pack/plugins/start/gitvimlog"]
+	path = vim/.vim/pack/plugins/start/gitvimlog
+	url = git@github.com:kablamo/vim-git-log.git
