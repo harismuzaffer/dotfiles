@@ -97,3 +97,6 @@
 [submodule "vim/.vim/pack/plugins/start/vimagit"]
 	path = vim/.vim/pack/plugins/start/vimagit
 	url = git@github.com:jreybert/vimagit.git
+[submodule "vim/.vim/pack/plugins/start/vimgitlog2"]
+	path = vim/.vim/pack/plugins/start/vimgitlog2
+	url = git@github.com:PAntoine/vimgitlog.git

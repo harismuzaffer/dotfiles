@@ -1,5 +1,7 @@
 let mapleader=','
 
+colorscheme gruvbox 
+
 "for vim 8.2 on mac, delete key doesnt delete the previously written text
 set backspace=indent,eol,start
 
@@ -198,10 +200,10 @@ function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
     if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> gd <plug>(lsp-definition)
-    nmap <buffer> gr <plug>(lsp-references)
-    nmap <buffer> gi <plug>(lsp-implementation)
-    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <Leader>gd <plug>(lsp-definition)
+    nmap <buffer> <Leader>gr <plug>(lsp-references)
+    nmap <buffer> <Leader>gi <plug>(lsp-implementation)
+    nmap <buffer> <Leader>gt <plug>(lsp-type-definition)
     nmap <buffer> <leader>rn <plug>(lsp-rename)
     nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
     nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
@@ -236,3 +238,8 @@ let g:ale_lint_on_insert_leave = 0
 " if you don't want linters to run on opening a file
 "let g:ale_lint_on_enter = 1
 
+
+"for vim git log
+let g:GITLOG_default_mode = 2
+map <silent> <f7> :call GITLOG_ToggleWindows()<cr>
+map <silent> <f5> :call GITLOG_FlipWindows()<cr>
