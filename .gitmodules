@@ -100,3 +100,9 @@
 [submodule "vim/.vim/pack/plugins/start/vimgitlog2"]
 	path = vim/.vim/pack/plugins/start/vimgitlog2
 	url = git@github.com:PAntoine/vimgitlog.git
+[submodule "vim/.vim/pack/plugins/start/merginal"]
+	path = vim/.vim/pack/plugins/start/merginal
+	url = git@github.com:idanarye/vim-merginal.git
+[submodule "vim/.vim/pack/plugins/start/cocvim"]
+	path = vim/.vim/pack/plugins/start/cocvim
+	url = git@github.com:neoclide/coc.nvim.git
