@@ -103,6 +103,3 @@
 [submodule "vim/.vim/pack/plugins/start/merginal"]
 	path = vim/.vim/pack/plugins/start/merginal
 	url = git@github.com:idanarye/vim-merginal.git
-[submodule "vim/.vim/pack/plugins/start/coc"]
-	path = vim/.vim/pack/plugins/start/coc
-	url = git@github.com:neoclide/coc.nvim.git
