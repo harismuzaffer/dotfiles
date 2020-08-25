@@ -103,6 +103,3 @@
 [submodule "vim/.vim/pack/plugins/start/merginal"]
 	path = vim/.vim/pack/plugins/start/merginal
 	url = git@github.com:idanarye/vim-merginal.git
-[submodule "vim/.vim/pack/plugins/start/smooth-scroll"]
-	path = vim/.vim/pack/plugins/start/smooth-scroll
-	url = git@github.com:yonchu/accelerated-smooth-scroll.git
