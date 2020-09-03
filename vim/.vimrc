@@ -1,5 +1,11 @@
 let mapleader=','
 
+"To leave the cursor in the same column when you use Ctrl+D, Ctrl+F, Ctrl+B, Ctrl+U, G, H, M, L, gg
+set nostartofline
+
+"cursor always be at least 4 lines away from the top or bottom of the window
+set scrolloff=4
+
 colorscheme gruvbox 
 
 "for vim 8.2 on mac, delete key doesnt delete the previously written text
@@ -15,6 +21,9 @@ set tabstop=4
 
 "show line numbers
 set nu
+
+"show relatuve line numebrs
+set relativenumber
 
 "max number of tabs - if max crossed, new tab will hide the oldest one
 set tabpagemax=10
@@ -135,6 +144,10 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
 " required for fzf
 set rtp+=/usr/local/opt/fzf
 
+
+" required for coc
+"set rtp+=/Users/mammoth/.vim/pack/plugins/start/cocvim/plugin
+
 "to toggle tags window
 nmap <F8> :TagbarToggle<CR>
 
@@ -166,7 +179,7 @@ set completeopt=menu,menuone,noinsert
 
 "for deoplete
 "set rtp+=/Users/mammoth/dotfiles/vim/.vim/pack/syntax/start/deoplete
-let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_at_startup = 1
 
 "mapping language server.. needed for lsc
 "let g:lsc_server_commands = {'python': 'pyls', 'javascript': 'typescript-language-server --stdio'}
@@ -178,13 +191,22 @@ let g:lsc_enable_diagnostics=v:false
 
 
 
-" for vimlsp and asyncomplete
+"for vimlsp and asyncomplete
 if executable('pyls')
     " pip install python-language-server
     au User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
         \ 'cmd': {server_info->['pyls']},
         \ 'allowlist': ['python'],
+        \ })
+endif
+
+if executable('rls')
+    " pip install python-language-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rls']},
+        \ 'allowlist': ['rust'],
         \ })
 endif
 
@@ -200,8 +222,8 @@ function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
     if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> <Leader>gd <plug>(lsp-definition)
-    nmap <buffer> <Leader>gr <plug>(lsp-references)
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gr <plug>(lsp-references)
     nmap <buffer> <Leader>gi <plug>(lsp-implementation)
     nmap <buffer> <Leader>gt <plug>(lsp-type-definition)
     nmap <buffer> <leader>rn <plug>(lsp-rename)
@@ -219,16 +241,16 @@ let g:asyncomplete_auto_completeopt = 0
 
 
 "for lsc
-let g:asyncomplete_auto_popup = 0
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-inoremap <silent><expr> <TAB>
-  \ pumvisible() ? "\<C-n>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ asyncomplete#force_refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"let g:asyncomplete_auto_popup = 0
+"function! s:check_back_space() abort
+"    let col = col('.') - 1
+"    return !col || getline('.')[col - 1]  =~ '\s'
+"endfunction
+"inoremap <silent><expr> <TAB>
+"  \ pumvisible() ? "\<C-n>" :
+"  \ <SID>check_back_space() ? "\<TAB>" :
+"  \ asyncomplete#force_refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 
 " Write this in your vimrc file
@@ -243,3 +265,37 @@ let g:ale_lint_on_insert_leave = 0
 let g:GITLOG_default_mode = 2
 map <silent> <f7> :call GITLOG_ToggleWindows()<cr>
 map <silent> <f5> :call GITLOG_FlipWindows()<cr>
+
+
+" GoTo code navigation for cocvim
+nmap <silent> <Leader>gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> <Leader>gr <Plug>(coc-references)
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+"coc ends her
+
+nnoremap <S-P> :Files<CR>
+
+"open nerdtree file browser
+map <C-n> :NERDTreeToggle<CR>
+map <C-S-n> :NERDTreeFind<CR>
+
+

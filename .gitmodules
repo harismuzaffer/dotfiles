@@ -103,3 +103,9 @@
 [submodule "vim/.vim/pack/plugins/start/merginal"]
 	path = vim/.vim/pack/plugins/start/merginal
 	url = git@github.com:idanarye/vim-merginal.git
+[submodule "vim/.vim/pack/plugins/start/smoothie"]
+	path = vim/.vim/pack/plugins/start/smoothie
+	url = git@github.com:psliwka/vim-smoothie.git
+[submodule "vim/.vim/pack/plugins/start/nerdtree"]
+	path = vim/.vim/pack/plugins/start/nerdtree
+	url = git@github.com:preservim/nerdtree.git
