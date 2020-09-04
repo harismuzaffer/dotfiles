@@ -121,3 +121,6 @@
 [submodule "vim/.vim/pack/plugins/start/ctrlp"]
 	path = vim/.vim/pack/plugins/start/ctrlp
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "vim/.vim/pack/plugins/start/vim-conflicted"]
+	path = vim/.vim/pack/plugins/start/vim-conflicted
+	url = git@github.com:christoomey/vim-conflicted.git
