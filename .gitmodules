@@ -121,3 +121,6 @@
 [submodule "vim/.vim/pack/plugins/start/ctrlp"]
 	path = vim/.vim/pack/plugins/start/ctrlp
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "vim/.vim/pack/plugins/start/vim-merge-tool"]
+	path = vim/.vim/pack/plugins/start/vim-merge-tool
+	url = git@github.com:samoshkin/vim-mergetool.git
