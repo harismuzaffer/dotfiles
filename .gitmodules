@@ -124,3 +124,12 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "vim/.vim/pack/syntax/start/vimcommentary"]
+	path = vim/.vim/pack/syntax/start/vimcommentary
+	url = git@github.com:tpope/vim-commentary.git
+[submodule "vim/.vim/pack/syntax/start/vim-sandwich"]
+	path = vim/.vim/pack/syntax/start/vim-sandwich
+	url = git@github.com:machakann/vim-sandwich.git
+[submodule "vim/.vim/pack/plugins/start/goyo"]
+	path = vim/.vim/pack/plugins/start/goyo
+	url = git@github.com:junegunn/goyo.vim.git
