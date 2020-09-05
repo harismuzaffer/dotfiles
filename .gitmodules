@@ -121,3 +121,6 @@
 [submodule "vim/.vim/pack/plugins/start/ctrlp"]
 	path = vim/.vim/pack/plugins/start/ctrlp
 	url = git@github.com:ctrlpvim/ctrlp.vim.git
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
