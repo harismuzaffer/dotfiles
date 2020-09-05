@@ -130,6 +130,3 @@
 [submodule "vim/.vim/pack/syntax/start/vim-sandwich"]
 	path = vim/.vim/pack/syntax/start/vim-sandwich
 	url = git@github.com:machakann/vim-sandwich.git
-[submodule "vim/.vim/pack/plugins/start/goyo"]
-	path = vim/.vim/pack/plugins/start/goyo
-	url = git@github.com:junegunn/goyo.vim.git
