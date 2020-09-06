@@ -197,7 +197,7 @@ if executable('pyls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
         \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': ['python'],
+        \ 'allowlist': [''],
         \ })
 endif
 
@@ -298,4 +298,4 @@ nnoremap <S-P> :Files<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-S-n> :NERDTreeFind<CR>
 
-
+nnoremap <Leader>h :!tig %<CR>
