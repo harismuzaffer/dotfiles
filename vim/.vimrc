@@ -142,7 +142,7 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
 "let g:ale_completion_enabled = 1
 
 " required for fzf
-set rtp+=/usr/local/opt/fzf
+set rtp+=$fzf
 
 
 " required for coc
