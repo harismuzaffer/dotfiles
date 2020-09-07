@@ -133,3 +133,15 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "vim/.vim/pack/plugins/start/easy-motion"]
+	path = vim/.vim/pack/plugins/start/easy-motion
+	url = git@github.com:easymotion/vim-easymotion.git
+[submodule "vim/.vim/pack/plugins/start/incsearch-vim"]
+	path = vim/.vim/pack/plugins/start/incsearch-vim
+	url = git@github.com:haya14busa/incsearch.vim.git
+[submodule "vim/.vim/pack/plugins/start/incsearch-easymotion"]
+	path = vim/.vim/pack/plugins/start/incsearch-easymotion
+	url = git@github.com:haya14busa/incsearch-easymotion.vim.git
+[submodule "vim/.vim/pack/plugins/start/fuzzy-incsearch"]
+	path = vim/.vim/pack/plugins/start/fuzzy-incsearch
+	url = git@github.com:haya14busa/incsearch-fuzzy.vim.git
