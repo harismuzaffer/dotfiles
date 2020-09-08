@@ -133,3 +133,9 @@
 [submodule "vim/.vim/pack/plugins/start/easy-motion"]
 	path = vim/.vim/pack/plugins/start/easy-motion
 	url = git@github.com:easymotion/vim-easymotion.git
+[submodule "vim/.vim/pack/plugins/start/nnn"]
+	path = vim/.vim/pack/plugins/start/nnn
+	url = git@github.com:mcchrish/nnn.vim.git
+[submodule "vim/.vim/pack/syntax/start/cochighlight"]
+	path = vim/.vim/pack/syntax/start/cochighlight
+	url = git@github.com:neoclide/coc-highlight.git
