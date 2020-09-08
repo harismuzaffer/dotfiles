@@ -6,6 +6,7 @@ set nostartofline
 "cursor always be at least 4 lines away from the top or bottom of the window
 set scrolloff=4
 
+set bg=dark
 colorscheme gruvbox 
 
 "for vim 8.2 on mac, delete key doesnt delete the previously written text
@@ -197,7 +198,7 @@ if executable('pyls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
         \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': [''],
+        \ 'allowlist': ['python'],
         \ })
 endif
 
@@ -298,4 +299,10 @@ nnoremap <S-P> :Files<CR>
 map <C-n> :NERDTreeToggle<CR>
 map <C-S-n> :NERDTreeFind<CR>
 
+"get file history(git) using tig
 nnoremap <Leader>h :!tig %<CR>
+
+"using a dedicated backup dir will prevent unrelated files in the working dir"
+set backupdir=/tmp//
+set directory=/tmp//
+set undodir=/tmp//
