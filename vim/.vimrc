@@ -57,8 +57,12 @@ if executable('rg')
   let g:ctrlp_user_command = 'rg %s --files --hidden --color=never --glob ""'
   let g:ackprg = 'rg --vimgrep'
 endif
+
 "always start CtrlP with the current directory
 let g:ctrlp_cmd='CtrlP :pwd'
+
+"change ctrlp mapping
+let g:ctrlp_map = '<C-S-L>'
 
 if executable('rg') | 
     set gp=rg\ --vimgrep\ --no-heading gfm=%f:%l:%c:%m,%f:%l%m,%f\ \ %l%m|
@@ -89,8 +93,9 @@ nnoremap <F6> :buffers<CR>:buffer<Space>
 "open quickfix window
 nnoremap <Leader>q :copen<CR>
 
-"open CtrlP to search from buffers list
-nnoremap <Leader>l :CtrlPBuffer<CR>
+"mapping for fzf to open files and buffers
+nnoremap <C-P> :Files<CR>
+nnoremap <Leader>l :Buffers<CR>
 
 "make window movemnt more natura using shift arrows
 nnoremap <S-Left> <C-W>h
@@ -190,7 +195,8 @@ set completeopt=menu,menuone,noinsert
 "turn off disgonistics from lsc
 let g:lsc_enable_diagnostics=v:false
 
-
+"highlight references lsp
+let g:lsp_highlight_references_enabled = 1
 
 "for vimlsp and asyncomplete
 if executable('pyls')
@@ -198,7 +204,7 @@ if executable('pyls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'pyls',
         \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': ['python'],
+        \ 'allowlist': [''],
         \ })
 endif
 
@@ -242,7 +248,7 @@ let g:asyncomplete_auto_completeopt = 0
 
 
 "for lsc
-"let g:asyncomplete_auto_popup = 0
+let g:asyncomplete_auto_popup = 0
 "function! s:check_back_space() abort
 "    let col = col('.') - 1
 "    return !col || getline('.')[col - 1]  =~ '\s'
@@ -293,8 +299,6 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 autocmd CursorHold * silent call CocActionAsync('highlight')
 "coc ends her
 
-nnoremap <S-P> :Files<CR>
-
 "open nerdtree file browser
 map <C-n> :NERDTreeToggle<CR>
 map <C-S-n> :NERDTreeFind<CR>
@@ -306,3 +310,34 @@ nnoremap <Leader>h :!tig %<CR>
 set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
+
+
+" Disable default mappings of nnn
+let g:nnn#set_default_mappings = 0
+nnoremap <silent> <leader>n :NnnPicker<CR>
+"Start nnn in the current file's directory
+nnoremap <leader>nn :NnnPicker '%:p:h'<CR>
+
+
+" Highlight all instances of word under cursor, when idle.
+" Useful when studying strange source code.
+" Type z/ to toggle highlighting on/off.
+nnoremap z/ :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+function! AutoHighlightToggle()
+   let @/ = ''
+   if exists('#auto_highlight')
+     au! auto_highlight
+     augroup! auto_highlight
+     setl updatetime=4000
+     echo 'Highlight current word: off'
+     return 0
+  else
+    augroup auto_highlight
+    au!
+    au CursorHold * let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'
+    augroup end
+    setl updatetime=500
+    echo 'Highlight current word: ON'
+  return 1
+ endif
+endfunction
