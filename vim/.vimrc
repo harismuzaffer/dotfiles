@@ -141,7 +141,7 @@ nmap <silent> <A-Up> :silent! qa<CR>:cn<CR><Leader>s
 "load all modified files in quickfix window
 nnoremap <Leader>m :DiffRev<CR>
 
-map <silent> <Leader>p :qa<CR><CR>
+"map <silent> <Leader>p :qa<CR><CR>
 
 autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
 
