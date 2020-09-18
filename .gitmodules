@@ -136,6 +136,3 @@
 [submodule "vim/.vim/pack/plugins/start/nnn"]
 	path = vim/.vim/pack/plugins/start/nnn
 	url = git@github.com:mcchrish/nnn.vim.git
-[submodule "vim/.vim/pack/colors/start/fahrenheit"]
-	path = vim/.vim/pack/colors/start/fahrenheit
-	url = git@github.com:fcpg/vim-fahrenheit.git
