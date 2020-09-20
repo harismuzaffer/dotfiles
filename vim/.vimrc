@@ -185,7 +185,6 @@ nnoremap <leader>tp :Tags<CR>
 set complete=.
 
 "set complete options
-"set completeopt=menu,menuone,noinsert
 set completeopt=menu,menuone,noinsert
 
 "for deoplete
