@@ -103,6 +103,11 @@ nnoremap <S-Right> <C-W>l
 nnoremap <S-Up> <C-W>k
 nnoremap <S-Down> <C-W>j
 
+nnoremap <M-Down> 7j
+nnoremap <M-Up> 7k
+nnoremap <M-Left> 4b
+nnoremap <M-Right> 4w
+
 "delete the current buffer
 nnoremap <Leader>d :bd<CR>
 
@@ -131,15 +136,15 @@ endfunction
 command! -nargs=0 DiffRev call s:get_diff_files()
 
 "open vimdiff for the file under cursor in quickfix window"
-nnoremap <Leader>s <CR>:!git difftool --tool=vimdiff --no-prompt %<CR>
+" nnoremap <Leader>s <CR>:!git difftool --tool=vimdiff --no-prompt %<CR>
 "close the current instance of vim - assuming that we are in diffmode, it will exit you from diffmmode and land at the place where vimdiff was invoked
-nnoremap <Leader>, :qa<CR>:copen<CR>
+" nnoremap <Leader>, :qa<CR>:copen<CR>
 "open the next file from quickfix in diff mode
-nmap  <silent> <A-Down> :silent! qa<CR>:cp<CR><Leader>s
+" nmap  <silent> <A-Down> :silent! qa<CR>:cp<CR><Leader>s
 "open the prev file from quickfix in diff mode
-nmap <silent> <A-Up> :silent! qa<CR>:cn<CR><Leader>s
+" nmap <silent> <A-Up> :silent! qa<CR>:cn<CR><Leader>s
 "load all modified files in quickfix window
-nnoremap <Leader>m :DiffRev<CR>
+" nnoremap <Leader>m :DiffRev<CR>
 
 "map <silent> <Leader>p :qa<CR><CR>
 
