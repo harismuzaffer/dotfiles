@@ -26,6 +26,12 @@ set nu
 "show relatuve line numebrs
 set relativenumber
 
+"toggle line numbers
+nnoremap <Leader>sl :set invnumber<CR>
+
+"toggle relativenumbers
+nnoremap <Leader>rl :set invrelativenumber<CR>
+
 "max number of tabs - if max crossed, new tab will hide the oldest one
 set tabpagemax=10
 
