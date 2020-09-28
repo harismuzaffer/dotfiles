@@ -61,9 +61,6 @@
 [submodule "vim/.vim/pack/plugins/start/gvvim"]
 	path = vim/.vim/pack/plugins/start/gvvim
 	url = git@github.com:junegunn/gv.vim.git
-[submodule "vim/.vim/pack/plugins/start/vimgitlog"]
-	path = vim/.vim/pack/plugins/start/vimgitlog
-	url = git@github.com:kablamo/vim-git-log.git
 [submodule "vim/.vim/pack/plugins/start/agit"]
 	path = vim/.vim/pack/plugins/start/agit
 	url = git@github.com:cohama/agit.vim.git
@@ -73,9 +70,6 @@
 [submodule "vim/.vim/pack/plugins/start/vimagit"]
 	path = vim/.vim/pack/plugins/start/vimagit
 	url = git@github.com:jreybert/vimagit.git
-[submodule "vim/.vim/pack/plugins/start/vimgitlog2"]
-	path = vim/.vim/pack/plugins/start/vimgitlog2
-	url = git@github.com:PAntoine/vimgitlog.git
 [submodule "vim/.vim/pack/plugins/start/merginal"]
 	path = vim/.vim/pack/plugins/start/merginal
 	url = git@github.com:idanarye/vim-merginal.git
