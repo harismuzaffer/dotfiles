@@ -34,9 +34,6 @@
 [submodule "vim/.vim/pack/syntax/start/lsc"]
 	path = vim/.vim/pack/syntax/start/lsc
 	url = git@github.com:natebosch/vim-lsc.git
-[submodule "vim/.vim/pack/plugins/start/virtualenvvim"]
-	path = vim/.vim/pack/plugins/start/virtualenvvim
-	url = git@github.com:jmcantrell/vim-virtualenv.git
 [submodule "vim/.vim/pack/colors/start/solarized"]
 	path = vim/.vim/pack/colors/start/solarized
 	url = git@github.com:lifepillar/vim-solarized8.git
