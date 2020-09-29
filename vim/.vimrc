@@ -111,35 +111,35 @@ nnoremap <S-Down> <C-W>j
 
 nnoremap <M-Down> 7j
 nnoremap <M-Up> 7k
-nnoremap <M-Left> 4b
-nnoremap <M-Right> 4w
+nnoremap <M-Right> 25l
+nnoremap <M-Left> 25h
 
 "delete the current buffer
 nnoremap <Leader>d :bd<CR>
 
 
 
-let s:git_status_dictionary = {
-            \ "A": "Added",
-            \ "B": "Broken",
-            \ "C": "Copied",
-            \ "D": "Deleted",
-            \ "M": "Modified",
-            \ "R": "Renamed",
-            \ "T": "Changed",
-            \ "U": "Unmerged",
-            \ "X": "Unknown"
-            \ }
-function! s:get_diff_files()
-  let list = map(split(system(
-              \ 'git diff --name-status HEAD'), '\n'),
-              \ '{"filename":matchstr(v:val, "\\S\\+$"),"text":s:git_status_dictionary[matchstr(v:val, "^\\w")]}'
-              \ )
-  call setqflist(list)
-  copen
-endfunction
+" let s:git_status_dictionary = {
+"             \ "A": "Added",
+"             \ "B": "Broken",
+"             \ "C": "Copied",
+"             \ "D": "Deleted",
+"             \ "M": "Modified",
+"             \ "R": "Renamed",
+"             \ "T": "Changed",
+"             \ "U": "Unmerged",
+"             \ "X": "Unknown"
+"             \ }
+" function! s:get_diff_files()
+"   let list = map(split(system(
+"               \ 'git diff --name-status HEAD'), '\n'),
+"               \ '{"filename":matchstr(v:val, "\\S\\+$"),"text":s:git_status_dictionary[matchstr(v:val, "^\\w")]}'
+"               \ )
+"   call setqflist(list)
+"   copen
+" endfunction
 
-command! -nargs=0 DiffRev call s:get_diff_files()
+" command! -nargs=0 DiffRev call s:get_diff_files()
 
 "open vimdiff for the file under cursor in quickfix window"
 " nnoremap <Leader>s <CR>:!git difftool --tool=vimdiff --no-prompt %<CR>
@@ -154,7 +154,7 @@ command! -nargs=0 DiffRev call s:get_diff_files()
 
 "map <silent> <Leader>p :qa<CR><CR>
 
-autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
+" autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
 
 "let g:ale_completion_enabled = 1
 
@@ -351,3 +351,4 @@ function! AutoHighlightToggle()
   return 1
  endif
 endfunction
+
