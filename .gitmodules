@@ -19,18 +19,6 @@
 [submodule "vim/.vim/pack/plugins/start/airline"]
 	path = vim/.vim/pack/plugins/start/airline
 	url = git@github.com:vim-airline/vim-airline.git
-[submodule "vim/.vim/pack/syntax/start/lsc"]
-	path = vim/.vim/pack/syntax/start/lsc
-	url = git@github.com:natebosch/vim-lsc.git
-[submodule "vim/.vim/pack/syntax/start/asyncomplete"]
-	path = vim/.vim/pack/syntax/start/asyncomplete
-	url = git@github.com:prabirshrestha/asyncomplete.vim.git
-[submodule "vim/.vim/pack/syntax/start/vimlsp"]
-	path = vim/.vim/pack/syntax/start/vimlsp
-	url = git@github.com:prabirshrestha/vim-lsp.git
-[submodule "vim/.vim/pack/syntax/start/asynccompletelsp"]
-	path = vim/.vim/pack/syntax/start/asynccompletelsp
-	url = git@github.com:prabirshrestha/asyncomplete-lsp.vim.git
 [submodule "vim/.vim/pack/plugins/start/vistavim"]
 	path = vim/.vim/pack/plugins/start/vistavim
 	url = git@github.com:liuchengxu/vista.vim.git
@@ -52,9 +40,6 @@
 [submodule "vim/.vim/pack/syntax/start/python-pep8-indent"]
 	path = vim/.vim/pack/syntax/start/python-pep8-indent
 	url = git@github.com:Vimjas/vim-python-pep8-indent.git
-[submodule "vim/.vim/pack/plugins/start/ctrlp"]
-	path = vim/.vim/pack/plugins/start/ctrlp
-	url = git@github.com:ctrlpvim/ctrlp.vim.git
 [submodule "vim/.vim/pack/syntax/start/vimcommentary"]
 	path = vim/.vim/pack/syntax/start/vimcommentary
 	url = git@github.com:tpope/vim-commentary.git
