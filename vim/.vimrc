@@ -154,7 +154,7 @@ nnoremap <Leader>d :bd<CR>
 
 "map <silent> <Leader>p :qa<CR><CR>
 
-" autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
+autocmd BufNewFile,BufRead *.ts setlocal filetype=javascript
 
 "let g:ale_completion_enabled = 1
 
@@ -192,10 +192,6 @@ set complete=.
 
 "set complete options
 set completeopt=menu,menuone,noinsert
-
-"for deoplete
-"set rtp+=/Users/mammoth/dotfiles/vim/.vim/pack/syntax/start/deoplete
-"let g:deoplete#enable_at_startup = 1
 
 "mapping language server.. needed for lsc
 "let g:lsc_server_commands = {'python': 'pyls', 'javascript': 'typescript-language-server --stdio'}
