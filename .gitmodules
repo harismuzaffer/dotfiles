@@ -16,18 +16,6 @@
 [submodule "vim/.vim/pack/plugins/start/gutentags"]
 	path = vim/.vim/pack/plugins/start/gutentags
 	url = git@github.com:ludovicchabant/vim-gutentags.git
-[submodule "vim/.vim/pack/plugins/start/codi"]
-	path = vim/.vim/pack/plugins/start/codi
-	url = git@github.com:metakirby5/codi.vim.git
-[submodule "vim/.vim/pack/syntax/start/neovimrpc"]
-	path = vim/.vim/pack/syntax/start/neovimrpc
-	url = git@github.com:roxma/vim-hug-neovim-rpc.git
-[submodule "vim/.vim/pack/plugins/start/nvim-yarp"]
-	path = vim/.vim/pack/plugins/start/nvim-yarp
-	url = git@github.com:roxma/nvim-yarp.git
-[submodule "vim/.vim/pack/syntax/start/deoplete-jedi"]
-	path = vim/.vim/pack/syntax/start/deoplete-jedi
-	url = git@github.com:deoplete-plugins/deoplete-jedi.git
 [submodule "vim/.vim/pack/plugins/start/airline"]
 	path = vim/.vim/pack/plugins/start/airline
 	url = git@github.com:vim-airline/vim-airline.git
@@ -43,36 +31,15 @@
 [submodule "vim/.vim/pack/syntax/start/asynccompletelsp"]
 	path = vim/.vim/pack/syntax/start/asynccompletelsp
 	url = git@github.com:prabirshrestha/asyncomplete-lsp.vim.git
-[submodule "vim/.vim/pack/syntax/start/deoplete"]
-	path = vim/.vim/pack/syntax/start/deoplete
-	url = git@github.com:Shougo/deoplete.nvim.git
 [submodule "vim/.vim/pack/plugins/start/vistavim"]
 	path = vim/.vim/pack/plugins/start/vistavim
 	url = git@github.com:liuchengxu/vista.vim.git
-[submodule "vim/.vim/pack/plugins/start/vimclap"]
-	path = vim/.vim/pack/plugins/start/vimclap
-	url = git@github.com:liuchengxu/vim-clap.git
 [submodule "vim/.vim/pack/plugins/start/fugitive"]
 	path = vim/.vim/pack/plugins/start/fugitive
 	url = git@github.com:tpope/vim-fugitive.git
 [submodule "vim/.vim/pack/colors/start/gruv"]
 	path = vim/.vim/pack/colors/start/gruv
 	url = git@github.com:morhetz/gruvbox.git
-[submodule "vim/.vim/pack/plugins/start/gvvim"]
-	path = vim/.vim/pack/plugins/start/gvvim
-	url = git@github.com:junegunn/gv.vim.git
-[submodule "vim/.vim/pack/plugins/start/agit"]
-	path = vim/.vim/pack/plugins/start/agit
-	url = git@github.com:cohama/agit.vim.git
-[submodule "vim/.vim/pack/plugins/start/git-timalapse"]
-	path = vim/.vim/pack/plugins/start/git-timalapse
-	url = git@github.com:junkblocker/git-time-lapse.git
-[submodule "vim/.vim/pack/plugins/start/vimagit"]
-	path = vim/.vim/pack/plugins/start/vimagit
-	url = git@github.com:jreybert/vimagit.git
-[submodule "vim/.vim/pack/plugins/start/merginal"]
-	path = vim/.vim/pack/plugins/start/merginal
-	url = git@github.com:idanarye/vim-merginal.git
 [submodule "vim/.vim/pack/plugins/start/smoothie"]
 	path = vim/.vim/pack/plugins/start/smoothie
 	url = git@github.com:psliwka/vim-smoothie.git
