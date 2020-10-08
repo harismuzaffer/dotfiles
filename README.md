@@ -1,7 +1,9 @@
-# magical dotfiles
+# Magical dot-files
 
-Use stow(https://www.gnu.org/software/stow/) to symlink the files correctly.
-For example to symlink vim directory only, use ```stow vim```. This will e.g. create a symlink ~/.vimrc to ~/dotfiles/vim/.vim/.vimrc and you are good to go 
+> Configuration files on unix, often begin with a dot hence the word 'dot-files'
+
+After cloning this [repo](https://github.com/harismuzaffer/dotfiles.git), Use [Stow](https://www.gnu.org/software/stow/) to symlink the files correctly.
+For example to symlink vim directory only, use `stow vim`. This will e.g. create a symlink ~/.vimrc to ~/dotfiles/vim/.vim/.vimrc and you are good to go 
 
 ### Contents
 - **Vim**
