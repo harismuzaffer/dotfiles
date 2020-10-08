@@ -1,6 +1,8 @@
 " SETTINGS START HERE
 
 " leader key: useful to create extra set of shortcuts
+" this is special variable, so adding it at the top regardless of the section
+" it belong to
 let mapleader=','
 
 " To leave the cursor in the same column when you use Ctrl+D, Ctrl+F, Ctrl+B, Ctrl+U, G, H, M, L, gg
@@ -8,6 +10,9 @@ set nostartofline
 
 " cursor always be at least 4 lines away from the top or bottom of the window
 set scrolloff=4
+
+" set 24 bit colors
+" set termguicolors
 
 set bg=dark
 colorscheme gruvbox 
