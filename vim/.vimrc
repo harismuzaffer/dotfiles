@@ -12,7 +12,7 @@ set nostartofline
 set scrolloff=4
 
 " set 24 bit colors
-" set termguicolors
+set termguicolors
 
 set bg=dark
 colorscheme gruvbox 
