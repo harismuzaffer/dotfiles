@@ -11,8 +11,12 @@ set nostartofline
 " cursor always be at least 4 lines away from the top or bottom of the window
 set scrolloff=4
 
-" set 24 bit colors
-set termguicolors
+
+
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 set bg=dark
 colorscheme gruvbox 
@@ -213,6 +217,8 @@ let g:ale_lint_on_insert_leave = 0
 " if you don't want linters to run on opening a file
 " let g:ale_lint_on_enter = 1
 
+" disabling smoothie in favour of sexy-scroller
+" let g:smoothie_no_default_mappings = 1
 
 " SET VARIABLES END HERE
 

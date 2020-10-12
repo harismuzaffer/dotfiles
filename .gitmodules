@@ -58,3 +58,6 @@
 [submodule "vim/.vim/pack/plugins/start/nnn"]
 	path = vim/.vim/pack/plugins/start/nnn
 	url = git@github.com:mcchrish/nnn.vim.git
+[submodule "vim/.vim/pack/colors/start/tender"]
+	path = vim/.vim/pack/colors/start/tender
+	url = git@github.com:jacoborus/tender.vim.git
