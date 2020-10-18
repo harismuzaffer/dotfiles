@@ -61,3 +61,6 @@
 [submodule "vim/.vim/pack/colors/start/tender"]
 	path = vim/.vim/pack/colors/start/tender
 	url = git@github.com:jacoborus/tender.vim.git
+[submodule "vim/.vim/pack/plugins/start/vimwiki"]
+	path = vim/.vim/pack/plugins/start/vimwiki
+	url = git@github.com:vimwiki/vimwiki.git
