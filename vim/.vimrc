@@ -11,15 +11,13 @@ set nostartofline
 " cursor always be at least 4 lines away from the top or bottom of the window
 set scrolloff=4
 
-
+set bg=dark
+colorscheme ayu 
 
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
  set termguicolors
 endif
-
-set bg=dark
-colorscheme gruvbox 
 
 " for vim 8.2 on mac, delete key doesnt delete the previously written text
 set backspace=indent,eol,start
@@ -75,6 +73,9 @@ set path=.,,**
 
 " syntax highlighting
 syntax on
+
+" line number coloring
+highlight LineNr guifg=#6A6C69
 
 " Set grep program. For Ack settings - use ripgrep as search program(default is usually grep)
 if executable('rg')
