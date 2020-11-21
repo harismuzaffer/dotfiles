@@ -236,7 +236,7 @@ colors:
    red:     '#e60000'
    green:   '#2db300'
    yellow:  '#f0c674'
-   blue:    '#81a2be'
+   blue:    '#0012FE'
    magenta: '#b294bb'
    cyan:    '#8abeb7'
    white:   '#ffffff'
@@ -247,7 +247,7 @@ colors:
     red:     '#d54e53'
     green:   '#79ff4d'
     yellow:  '#e7c547'
-    blue:    '#7aa6da'
+    blue:    '#0477FF'
     magenta: '#c397d8'
     cyan:    '#70c0b1'
     white:   '#eaeaea'
@@ -356,7 +356,7 @@ colors:
   #thickness: 0.15
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
