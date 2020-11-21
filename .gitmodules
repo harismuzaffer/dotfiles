@@ -64,3 +64,9 @@
 [submodule "vim/.vim/pack/plugins/start/vimwiki"]
 	path = vim/.vim/pack/plugins/start/vimwiki
 	url = git@github.com:vimwiki/vimwiki.git
+[submodule "vim/.vim/pack/colors/start/nord"]
+	path = vim/.vim/pack/colors/start/nord
+	url = git@github.com:arcticicestudio/nord-vim.git
+[submodule "vim/.vim/pack/colors/start/dracula"]
+	path = vim/.vim/pack/colors/start/dracula
+	url = git@github.com:dracula/vim.git
