@@ -64,3 +64,6 @@
 [submodule "vim/.vim/pack/plugins/start/vimwiki"]
 	path = vim/.vim/pack/plugins/start/vimwiki
 	url = git@github.com:vimwiki/vimwiki.git
+[submodule "vim/.vim/pack/colors/start/noctu"]
+	path = vim/.vim/pack/colors/start/noctu
+	url = git@github.com:noahfrederick/vim-noctu.git
