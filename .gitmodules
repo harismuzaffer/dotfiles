@@ -64,3 +64,6 @@
 [submodule "vim/.vim/pack/plugins/start/vimwiki"]
 	path = vim/.vim/pack/plugins/start/vimwiki
 	url = git@github.com:vimwiki/vimwiki.git
+[submodule "vim/.vim/pack/colors/start/ayu"]
+	path = vim/.vim/pack/colors/start/ayu
+	url = git@github.com:ayu-theme/ayu-vim.git
