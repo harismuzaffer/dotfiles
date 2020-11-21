@@ -64,6 +64,3 @@
 [submodule "vim/.vim/pack/plugins/start/vimwiki"]
 	path = vim/.vim/pack/plugins/start/vimwiki
 	url = git@github.com:vimwiki/vimwiki.git
-[submodule "vim/.vim/pack/colors/start/gruvbox8"]
-	path = vim/.vim/pack/colors/start/gruvbox8
-	url = git@github.com:lifepillar/vim-gruvbox8.git
