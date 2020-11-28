@@ -12,7 +12,8 @@ set nostartofline
 set scrolloff=4
 
 set bg=dark
-colorscheme ayu 
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox 
 
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
@@ -99,6 +100,9 @@ set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
 
+" this is a temp hack. Pressing the escape key has a slight delay.
+set ttimeoutlen=2
+
 " SETTINGS END HERE
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -146,11 +150,22 @@ nnoremap <S-Right> <C-W>l
 nnoremap <S-Up> <C-W>k
 nnoremap <S-Down> <C-W>j
 
-" lines and characters movemnt
+" Maximize the current window
+nnoremap <C-W>M <C-W>\| <C-W>_
+" Restore window width and height 
+nnoremap <C-W>m <C-W>=
+
+" lines and characters movemnt for normal mode
 nnoremap <M-Down> 7j
 nnoremap <M-Up> 7k
 nnoremap <M-Right> 25l
 nnoremap <M-Left> 25h
+
+" lines and characters movemnt for insert mode
+inoremap <M-Down> <C-o>7j
+inoremap <M-Up> <C-o>7k
+inoremap <M-Right> <C-o>25l
+inoremap <M-Left> <C-o>25h
 
 " delete the current buffer
 nnoremap <Leader>d :bd<CR>
