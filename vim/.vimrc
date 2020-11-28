@@ -233,8 +233,9 @@ let g:ale_lint_on_insert_leave = 0
 " if you don't want linters to run on opening a file
 " let g:ale_lint_on_enter = 1
 
-" disabling smoothie in favour of sexy-scroller
-" let g:smoothie_no_default_mappings = 1
+" new version of fzf comes with a new layout which is buggy, keeping the old
+" which is also better
+let g:fzf_layout = { 'down': '45' }
 
 " SET VARIABLES END HERE
 
