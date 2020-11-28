@@ -25,9 +25,6 @@
 [submodule "vim/.vim/pack/plugins/start/fugitive"]
 	path = vim/.vim/pack/plugins/start/fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "vim/.vim/pack/colors/start/gruv"]
-	path = vim/.vim/pack/colors/start/gruv
-	url = git@github.com:morhetz/gruvbox.git
 [submodule "vim/.vim/pack/plugins/start/smoothie"]
 	path = vim/.vim/pack/plugins/start/smoothie
 	url = git@github.com:psliwka/vim-smoothie.git
