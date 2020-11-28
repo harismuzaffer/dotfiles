@@ -67,6 +67,3 @@
 [submodule "vim/.vim/pack/colors/start/gruvcom"]
 	path = vim/.vim/pack/colors/start/gruvcom
 	url = git@github.com:gruvbox-community/gruvbox.git
-[submodule "vim/.vim/pack/colors/start/apprentice"]
-	path = vim/.vim/pack/colors/start/apprentice
-	url = git@github.com:romainl/Apprentice.git
