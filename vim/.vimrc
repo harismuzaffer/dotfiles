@@ -235,7 +235,7 @@ let g:ale_lint_on_insert_leave = 0
 
 " new version of fzf comes with a new layout which is buggy, keeping the old
 " which is also better
-let g:fzf_layout = { 'down': '45' }
+let g:fzf_layout = { 'down': '45%' }
 
 " SET VARIABLES END HERE
 
