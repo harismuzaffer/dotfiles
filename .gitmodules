@@ -16,9 +16,6 @@
 [submodule "vim/.vim/pack/plugins/start/gutentags"]
 	path = vim/.vim/pack/plugins/start/gutentags
 	url = git@github.com:ludovicchabant/vim-gutentags.git
-[submodule "vim/.vim/pack/plugins/start/airline"]
-	path = vim/.vim/pack/plugins/start/airline
-	url = git@github.com:vim-airline/vim-airline.git
 [submodule "vim/.vim/pack/plugins/start/vistavim"]
 	path = vim/.vim/pack/plugins/start/vistavim
 	url = git@github.com:liuchengxu/vista.vim.git
