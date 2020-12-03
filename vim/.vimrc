@@ -1,4 +1,6 @@
 " SETTINGS START HERE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " leader key: useful to create extra set of shortcuts
 " this is special variable, so adding it at the top regardless of the section
@@ -10,15 +12,6 @@ set nostartofline
 
 " cursor always be at least 4 lines away from the top or bottom of the window
 set scrolloff=4
-
-set bg=dark
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox 
-
-" If you have vim >=8.0 or Neovim >= 0.1.5
-if (has("termguicolors"))
- set termguicolors
-endif
 
 " for vim 8.2 on mac, delete key doesnt delete the previously written text
 set backspace=indent,eol,start
@@ -45,10 +38,6 @@ set nu
 
 "show relatuve line numebrs
 set relativenumber
-
-
-" max number of tabs - if max crossed, new tab will hide the oldest one
-set tabpagemax=10
 
 " expand tabs to spaces
 set expandtab
@@ -86,8 +75,6 @@ endif
 
 set history=1000
 
-" required for fzf. Make sure you have fzf path set in your bashrc, zsh etc
-set rtp+=$fzf
 
 " native completion of vim: set it to current buffer only 
 set complete=.
@@ -100,8 +87,6 @@ set backupdir=/tmp//
 set directory=/tmp//
 set undodir=/tmp//
 
-" this is a temp hack. Pressing the escape key has a slight delay.
-set ttimeoutlen=2
 
 " SETTINGS END HERE
 
@@ -140,10 +125,6 @@ nnoremap <F6> :buffers<CR>:buffer<Space>
 " open quickfix window
 nnoremap <Leader>q :copen<CR>
 
-" mapping for fzf to open files and buffers
-nnoremap <C-P> :Files<CR>
-nnoremap <Leader>l :Buffers<CR>
-
 " make window movemnt more natura using shift arrows
 nnoremap <S-Left> <C-W>h
 nnoremap <S-Right> <C-W>l
@@ -170,74 +151,12 @@ inoremap <M-Left> <C-o>25h
 " delete the current buffer
 nnoremap <Leader>d :bd<CR>
 
-" go to def using fzf tags
-nnoremap <silent> <Leader>gdd :Tags <C-R><C-W><CR>
-
-" find the word under cursor in all files
-nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
-
-" browse tags in the buffer
-nnoremap <leader>tb :BTags<CR>
-
-" browse tags in the project
-nnoremap <leader>tp :Tags<CR>
-
-" toggle tags window
-nmap <F8> :TagbarToggle<CR>
-
-" coc.nvim config starts
-" GoTo code navigation for cocvim
-nmap <silent> <Leader>gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> <Leader>gr <Plug>(coc-references)
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-
-" navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-" coc ends here
-
-"get file history(git) using tig
-nnoremap <Leader>h :!tig %<CR>
-
-" nnn file manager
-nnoremap <silent> <leader>n :NnnPicker<CR>
-"Start nnn in the current file's directory
-nnoremap <leader>nn :NnnPicker '%:p:h'<CR>
-
 " Highlight all instances of word under cursor, when idle. Function is defined
 " in functions section
 " Type z/ to toggle highlighting on/off.
 nnoremap z/ :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
 
 "MAPPINGS END HERE
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" SET VARIABLES START HERE
-
-" for gutentags, exlcude these file types
-let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.yml', '*.json', '*.scss', '*.less', 'node_modules']
-" cache dir for gutentags
-let g:gutentags_cache_dir = '~/.gutentags'
-
-" when should ALE lint
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-" if you don't want linters to run on opening a file
-" let g:ale_lint_on_enter = 1
-
-" new version of fzf comes with a new layout which is buggy, keeping the old
-" which is also better
-let g:fzf_layout = { 'down': '45%' }
-
-" SET VARIABLES END HERE
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -283,7 +202,18 @@ function! s:show_documentation()
   endif
 endfunction
 
+" Function to source only if file exists
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+
 " FUNCTIONS END HERE
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" non minimal settings"
+
+call SourceIfExists("~/vimrcplus.vim")
