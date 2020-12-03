@@ -29,16 +29,16 @@ set hidden
 " set filetype on, filetype plugin on and filetype indent on
 filetype plugin indent on
 
-" when hitting Tab/Backspace keys, how far should cursor move...This is
-" different from length of Tab character. When expandtab is on, then there will
-" be no Tab character at all- meaning hitting Tab key will enter spaces...equivalent
-" to the number specified in softtabstop. If expandtab is off, then hitting Tab
-" will enter both, the Tab characters and spaces depending on the value of
-" tabstop. For example, if tabstop is 8 and softtabstop is 4, then hitting Tab
-" key will enter 4 spaces first time then on second hit, it will convert all
-" the 8 spaces into one Tab character. Hitting Tab 5 times will enter 2 Tab
-" characters and 4 spaces.
-set tabstop=4
+" There are two things: the TAB character and pressing TAB key. How many
+" columns a TAB character is worth, that is defined by the variable called
+" tabstop. On the other hand, the variable softtabstop defines the TAB key,
+" not the TAB character. softtabstop of 4 means that pressing TAB key will 
+" insert 4 spaces and pressing backspace will delete 4 spaces. A setting of
+" tabstop=8 and softtabstop=4 means that pressing TAB key once will insert 4
+" spaces and hitting it once more will insert 4 more spaces but since 4+4=8
+" equals the lenght of TAB character i.e. tabstop, vim will convert all 8
+" spaces to one TAB character now
+set softtabstop=4
 
 " show line numbers
 set nu
