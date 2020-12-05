@@ -148,6 +148,18 @@ inoremap <M-Up> <C-o>7k
 inoremap <M-Right> <C-o>25l
 inoremap <M-Left> <C-o>25h
 
+" lines and characters movemnt for normal mode - short
+nnoremap <S-M-Down> 3j
+nnoremap <S-M-Up> 3k
+nnoremap <S-M-Right> 10l
+nnoremap <S-M-Left> 10h
+
+" lines and characters movemnt for insert mode - short
+inoremap <S-M-Down> <C-o>3j
+inoremap <S-M-Up> <C-o>3k
+inoremap <S-M-Right> <C-o>10l
+inoremap <S-M-Left> <C-o>10h
+
 " delete the current buffer
 nnoremap <Leader>d :bd<CR>
 
