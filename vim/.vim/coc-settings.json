@@ -1,5 +1,6 @@
 {
     "suggest.noselect": false,
     "coc.preferences.noselect": false,
-    "coc.source.buffer.enable": false
+    "coc.source.buffer.enable": false,
+    "jedi.completion.disableSnippets": true
 }
