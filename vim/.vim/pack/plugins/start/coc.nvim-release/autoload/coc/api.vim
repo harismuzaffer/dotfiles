@@ -2,11 +2,11 @@
 " Description: Client api used by vim8
 " Author: Qiming Zhao <chemzqm@gmail.com>
 " Licence: MIT licence
-" Last Modified:  June 28, 2019
+" Last Modified:  Nov 11, 2020
 " ============================================================================
 if has('nvim') | finish | endif
 let s:funcs = {}
-let s:prop_id = 1000
+let s:prop_offset = get(g:, 'coc_text_prop_offset', 1000)
 let s:namespace_id = 1
 let s:namespace_cache = {}
 
@@ -121,7 +121,7 @@ function! s:funcs.get_api_info()
 endfunction
 
 function! s:funcs.list_bufs()
-  return map(getbufinfo({'buflisted': 1}), 'v:val["bufnr"]')
+  return map(getbufinfo({'bufloaded': 1}), 'v:val["bufnr"]')
 endfunction
 
 function! s:funcs.feedkeys(keys, mode, escape_csi)
@@ -240,13 +240,13 @@ function! s:funcs.buf_get_mark(bufnr, name)
 endfunction
 
 function! s:funcs.buf_add_highlight(bufnr, srcId, hlGroup, line, colStart, colEnd) abort
-  if !has('textprop')
+  if !has('textprop') || !has('patch-8.1.1719')
     return
   endif
   let bufnr = a:bufnr == 0 ? bufnr('%') : a:bufnr
-  let key = 'Coc'.a:hlGroup
-  if empty(prop_type_get(key))
-    call prop_type_add(key, {'highlight': a:hlGroup, 'combine': 1})
+  let type = 'CocHighlight'.a:hlGroup
+  if empty(prop_type_get(type))
+    call prop_type_add(type, {'highlight': a:hlGroup, 'combine': 1})
   endif
   let total = strlen(getbufline(bufnr, a:line + 1)[0])
   let end = a:colEnd
@@ -258,50 +258,44 @@ function! s:funcs.buf_add_highlight(bufnr, srcId, hlGroup, line, colStart, colEn
   if end <= a:colStart
     return
   endif
-  let id = 0
-  if a:srcId != -1
-    let cached = getbufvar(bufnr, 'prop_namespace_'.a:srcId, [])
-    let id = s:prop_id
-    let s:prop_id = id + 1
-    call add(cached, id)
-    call setbufvar(bufnr, 'prop_namespace_'.a:srcId, cached)
+  let srcId = a:srcId
+  if srcId == 0
+    while v:true
+      let srcId = srcId + 1
+      if empty(prop_find({'id': s:prop_offset + srcId, 'lnum' : 1}))
+        break
+      endif
+    endwhile
+    " generate srcId
   endif
+  let id = srcId == -1 ? 0 : s:prop_offset + srcId
   try
-    call prop_add(a:line + 1, a:colStart + 1, {'length': end - a:colStart, 'bufnr': bufnr, 'type': key, 'id': id})
+    call prop_add(a:line + 1, a:colStart + 1, {'length': end - a:colStart, 'bufnr': bufnr, 'type': type, 'id': id})
   catch /^Vim\%((\a\+)\)\=:E967/
     " ignore 967
   endtry
+  let g:i = srcId
+  if a:srcId == 0
+    " return generated srcId
+    return srcId
+  endif
 endfunction
 
 function! s:funcs.buf_clear_namespace(bufnr, srcId, startLine, endLine) abort
-  if !has('textprop')
+  if !has('textprop') || !has('patch-8.1.1719')
     return
   endif
+  let bufnr = a:bufnr == 0 ? bufnr('%') : a:bufnr
+  let start = a:startLine + 1
+  let end = a:endLine == -1 ? len(getbufline(bufnr, 1, '$')) : a:endLine + 1
   if a:srcId == -1
-    if a:endLine == -1
-      call prop_clear(a:startLine + 1, {'bufnr': a:bufnr})
-    else
-      call prop_clear(a:startLine + 1, a:endLine + 1, {'bufnr': a:bufnr})
-    endif
+    call prop_clear(start, end, {'bufnr' : bufnr})
   else
-    let cached = getbufvar(a:bufnr, 'prop_namespace_'.a:srcId, [])
-    if empty(cached)
-      return
-    endif
-    call setbufvar(a:bufnr, 'prop_namespace_'.a:srcId, [])
-    for id in cached
-      if a:endLine == -1
-        if a:startLine == 0 && a:endLine == -1
-          call prop_remove({'id':id, 'bufnr': a:bufnr})
-        elseif a:endLine != -1
-          call prop_remove({'id':id, 'bufnr': a:bufnr}, a:startLine, a:endLine)
-        else
-          let len = s:buf_line_count(a:bufnr)
-          call prop_remove({'id':id, 'bufnr': a:bufnr}, a:startLine, len)
-        endif
-      else
-      endif
-    endfor
+    try
+      call prop_remove({'bufnr': bufnr, 'all': 1, 'id': s:prop_offset + a:srcId}, start, end)
+    catch /^Vim\%((\a\+)\)\=:E968/
+      " ignore 968
+    endtry
   endif
 endfunction
 

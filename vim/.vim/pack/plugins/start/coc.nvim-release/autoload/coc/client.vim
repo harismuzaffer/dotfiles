@@ -36,6 +36,10 @@ endfunction
 
 function! s:start() dict
   if self.running | return | endif
+  if !isdirectory(getcwd())
+    echohl Error | echon '[coc.nvim] Current cwd is not a valid directory.' | echohl None
+    return
+  endif
   let timeout = string(get(g:, 'coc_channel_timeout', 30))
   let disable_warning = string(get(g:, 'coc_disable_startup_warning', 0))
   let tmpdir = fnamemodify(tempname(), ':p:h')
@@ -68,25 +72,36 @@ function! s:start() dict
     let self['running'] = 1
     let self['channel'] = job_getchannel(job)
   else
-    let original = {
-      \ 'NODE_NO_WARNINGS': getenv('NODE_NO_WARNINGS'),
-      \ 'COC_CHANNEL_TIMEOUT': getenv('COC_CHANNEL_TIMEOUT'),
-      \ 'COC_NO_WARNINGS': getenv('COC_NO_WARNINGS'),
-      \ 'TMPDIR': getenv('TMPDIR'),
-      \ }
+    let original = {'tmpdir': $TMPDIR}
     " env option not work on neovim
-    call setenv('NODE_NO_WARNINGS', '1')
-    call setenv('COC_CHANNEL_TIMEOUT', timeout)
-    call setenv('COC_NO_WARNINGS', disable_warning)
-    call setenv('TMPDIR', tmpdir)
+    if exists('*setenv')
+      let original = {
+            \ 'NODE_NO_WARNINGS': getenv('NODE_NO_WARNINGS'),
+            \ 'COC_CHANNEL_TIMEOUT': getenv('COC_CHANNEL_TIMEOUT'),
+            \ 'COC_NO_WARNINGS': getenv('COC_NO_WARNINGS'),
+            \ 'TMPDIR': getenv('TMPDIR'),
+            \ }
+      call setenv('NODE_NO_WARNINGS', '1')
+      call setenv('COC_CHANNEL_TIMEOUT', timeout)
+      call setenv('COC_NO_WARNINGS', disable_warning)
+      call setenv('TMPDIR', tmpdir)
+    else
+      let $NODE_NO_WARNINGS = 1
+      let $COC_NO_WARNINGS = disable_warning
+      let $TMPDIR = tmpdir
+    endif
     let chan_id = jobstart(self.command, {
           \ 'rpc': 1,
           \ 'on_stderr': {channel, msgs -> s:on_stderr(self.name, msgs)},
           \ 'on_exit': {channel, code -> s:on_exit(self.name, code)},
           \})
-    for key in keys(original)
-      call setenv(key, original[key])
-    endfor
+    if exists('*setenv')
+      for key in keys(original)
+        call setenv(key, original[key])
+      endfor
+    else
+      let $TMPDIR = original['tmpdir']
+    endif
     if chan_id <= 0
       echohl Error | echom 'Failed to start '.self.name.' service' | echohl None
       return
@@ -116,6 +131,10 @@ function! s:on_exit(name, code) abort
   let client['channel'] = v:null
   let client['async_req_id'] = 1
   if a:code != 0 && a:code != 143
+    " could be syntax error
+    if a:code == 1
+      call s:check_node()
+    endif
     echohl Error | echom 'client '.a:name. ' abnormal exit with: '.a:code | echohl None
   endif
 endfunction
@@ -306,4 +325,15 @@ function! coc#client#open_log()
     return
   endif
   execute 'vs '.s:logfile
+endfunction
+
+function! s:check_node() abort
+  let node = get(g:, 'coc_node_path', $COC_NODE_PATH == '' ? 'node' : $COC_NODE_PATH)
+  let output = trim(system(node . ' --version'))
+  let ms = matchlist(output, 'v\(\d\+\).\(\d\+\).\(\d\+\)')
+  if empty(ms) || str2nr(ms[1]) < 10 || (str2nr(ms[1]) == 10 && str2nr(ms[2]) < 12)
+    echohl Error 
+    echon '[coc.nvim] Node version '.output.' < 10.12.0, please upgrade node.js or use g:coc_node_path variable.'
+    echohl None
+  endif
 endfunction
