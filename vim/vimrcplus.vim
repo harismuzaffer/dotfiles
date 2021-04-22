@@ -73,6 +73,11 @@ nnoremap <silent> <leader>n :NnnPicker<CR>
 "Start nnn in the current file's directory
 nnoremap <leader>nn :NnnPicker '%:p:h'<CR>
 
+" jq command to parse json
+if (executable("jq"))
+    nnoremap <Leader>jq :%! jq .<CR>
+endif
+
 " for gutentags, exlcude these file types
 let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.yml', '*.json', '*.scss', '*.less', 'node_modules']
 " cache dir for gutentags
