@@ -81,6 +81,14 @@ nnoremap <silent> <leader>n :NnnPicker<CR>
 "Start nnn in the current file's directory
 nnoremap <leader>nn :NnnPicker '%:p:h'<CR>
 
+" minimap mappings 
+nnoremap <Leader>mm :MinimapToggle<CR>
+
+" Signify mappings
+nnoremap <leader>hd :SignifyDiff<cr>
+nnoremap <leader>hp :SignifyHunkDiff<cr>
+nnoremap <leader>hu :SignifyHunkUndo<cr>
+
 " vim illuminate: whitelist only these file type
 let g:Illuminate_ftwhitelist = ['javascript', 'python', 'rust']
 
