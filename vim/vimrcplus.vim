@@ -33,6 +33,14 @@ nnoremap <leader>tb :BTags<CR>
 " browse tags in the project
 nnoremap <leader>tp :Tags<CR>
 
+let g:fzf_layout = { 'window': { 'width': 0.97, 'height': 0.80 } }
+let $FZF_DEFAULT_OPTS="--preview-window 'right:57%' --preview 'bat --style=numbers --line-range :300 {}'
+            \ --bind ctrl-y:preview-up,ctrl-e:preview-down,
+            \ctrl-b:preview-page-up,ctrl-f:preview-page-down,
+            \ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down,
+            \shift-up:preview-top,shift-down:preview-bottom,
+            \alt-up:half-page-up,alt-down:half-page-down"
+
 "FZF setting ends here
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -88,8 +96,4 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 " if you don't want linters to run on opening a file
 " let g:ale_lint_on_enter = 1
-
-" new version of fzf comes with a new layout which is buggy, keeping the old
-" which is better
-let g:fzf_layout = { 'down': '45%' }
 
