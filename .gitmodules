@@ -70,6 +70,3 @@
 [submodule "vim/.vim/pack/plugins/start/vimilluminate"]
 	path = vim/.vim/pack/plugins/start/vimilluminate
 	url = git@github.com:RRethy/vim-illuminate.git
-[submodule "vim/.vim/pack/plugins/start/vimgitgutter"]
-	path = vim/.vim/pack/plugins/start/vimgitgutter
-	url = git@github.com:airblade/vim-gitgutter.git
