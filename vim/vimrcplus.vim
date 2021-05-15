@@ -68,18 +68,21 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-"COC setting ends here
+" COC setting ends here
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-"get file history(git) using tig
+" get file history(git) using tig
 nnoremap <Leader>h :!tig %<CR>
 
 " nnn file manager
 nnoremap <silent> <leader>n :NnnPicker<CR>
 "Start nnn in the current file's directory
 nnoremap <leader>nn :NnnPicker '%:p:h'<CR>
+
+" vim illuminate: whitelist only these file type
+let g:Illuminate_ftwhitelist = ['javascript', 'python', 'rust']
 
 " jq command to parse json
 if (executable("jq"))
