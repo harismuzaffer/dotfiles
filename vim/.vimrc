@@ -19,6 +19,9 @@ set backspace=indent,eol,start
 " when changing buffer, hide the current buffer rather than throwing it away
 set hidden
 
+" If this many milliseconds nothing is typed the swap file will be written to disk: default is 4000ms
+set updatetime=100
+
 " set filetype on, filetype plugin on and filetype indent on
 filetype plugin indent on
 
