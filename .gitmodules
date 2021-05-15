@@ -73,3 +73,6 @@
 [submodule "vim/.vim/pack/plugins/start/vimsignify"]
 	path = vim/.vim/pack/plugins/start/vimsignify
 	url = git@github.com:mhinz/vim-signify.git
+[submodule "vim/.vim/pack/plugins/start/minimap"]
+	path = vim/.vim/pack/plugins/start/minimap
+	url = git@github.com:wfxr/minimap.vim.git
