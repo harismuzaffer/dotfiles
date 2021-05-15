@@ -70,3 +70,9 @@
 [submodule "vim/.vim/pack/plugins/start/vimilluminate"]
 	path = vim/.vim/pack/plugins/start/vimilluminate
 	url = git@github.com:RRethy/vim-illuminate.git
+[submodule "vim/.vim/pack/plugins/start/vimsignify"]
+	path = vim/.vim/pack/plugins/start/vimsignify
+	url = git@github.com:mhinz/vim-signify.git
+[submodule "vim/.vim/pack/plugins/minimap"]
+	path = vim/.vim/pack/plugins/minimap
+	url = git@github.com:wfxr/minimap.vim.git
