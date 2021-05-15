@@ -99,7 +99,7 @@ nnoremap <Leader>sl :set invnumber<CR>
 nnoremap <Leader>rl :set invrelativenumber<CR>
 
 " This unsets the last search pattern register by hitting return
-nnoremap <Leader>c :noh<CR><CR>
+nnoremap <Leader>c :noh<CR>
 
 " open next result from quickfix results
 nnoremap <F1> :cn<CR>zz
