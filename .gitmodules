@@ -76,6 +76,3 @@
 [submodule "vim/.vim/pack/plugins/start/minimap"]
 	path = vim/.vim/pack/plugins/start/minimap
 	url = git@github.com:wfxr/minimap.vim.git
-[submodule "vim/.vim/pack/plugins/start/diffconflicts"]
-	path = vim/.vim/pack/plugins/start/diffconflicts
-	url = git@github.com:whiteinge/diffconflicts.git
