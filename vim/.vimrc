@@ -64,9 +64,6 @@ set path=.,,**
 " syntax highlighting
 syntax on
 
-" line number coloring
-highlight LineNr guifg=#6A6C69
-
 " Set grep program. For Ack settings - use ripgrep as search program(default is usually grep)
 if executable('rg')
     let g:ackprg = 'rg --vimgrep'
