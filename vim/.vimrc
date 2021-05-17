@@ -22,6 +22,9 @@ set hidden
 " If this many milliseconds nothing is typed the swap file will be written to disk: default is 4000ms
 set updatetime=100
 
+" incremental search
+set incsearch 
+
 " set filetype on, filetype plugin on and filetype indent on
 filetype plugin indent on
 
@@ -97,6 +100,9 @@ set undodir=/tmp//
 
 " toggle line numbers
 nnoremap <Leader>sl :set invnumber<CR>
+
+" toggle ignore case
+nnoremap <Leader>ic :set ic!<CR>
 
 " toggle relativenumbers
 nnoremap <Leader>rl :set invrelativenumber<CR>
