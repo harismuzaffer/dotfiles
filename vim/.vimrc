@@ -10,6 +10,12 @@ let mapleader=','
 " To leave the cursor in the same column when you use Ctrl+D, Ctrl+F, Ctrl+B, Ctrl+U, G, H, M, L, gg
 set nostartofline
 
+" foldmethod will be indent, all folds open when opening file and foldlevel
+" too high means no nested folds
+set foldmethod=indent
+set nofoldenable 
+set foldlevel=9999
+
 " cursor always be at least 4 lines away from the top or bottom of the window
 set scrolloff=4
 
