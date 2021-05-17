@@ -166,6 +166,10 @@ inoremap <S-M-Up> <C-o>3k
 inoremap <S-M-Right> <C-o>10l
 inoremap <S-M-Left> <C-o>10h
 
+" Keep next/pre search results at the center of screen
+nnoremap n nzz
+nnoremap N Nzz
+
 " delete the current buffer
 nnoremap <Leader>d :bd<CR>
 
