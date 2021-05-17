@@ -89,6 +89,9 @@ nnoremap <leader>hd :SignifyDiff<cr>
 nnoremap <leader>hp :SignifyHunkDiff<cr>
 nnoremap <leader>hu :SignifyHunkUndo<cr>
 
+" fuzzysearch
+nnoremap // :FuzzySearch<CR>
+
 " vim illuminate: whitelist only these file type
 let g:Illuminate_ftwhitelist = ['javascript', 'python', 'rust']
 
