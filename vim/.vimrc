@@ -16,6 +16,11 @@ set foldmethod=indent
 set nofoldenable 
 set foldlevel=9999
 
+" scroll horizantally
+set sidescroll=1
+nnoremap zl 10zl
+nnoremap zh 10zh
+
 " cursor always be at least 4 lines away from the top or bottom of the window
 set scrolloff=4
 
