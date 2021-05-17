@@ -79,6 +79,3 @@
 [submodule "vim/.vim/pack/plugins/start/fuzzysearch"]
 	path = vim/.vim/pack/plugins/start/fuzzysearch
 	url = git@github.com:ggVGc/vim-fuzzysearch.git
-[submodule "vim/.vim/pack/plugins/start/accerelatedjk"]
-	path = vim/.vim/pack/plugins/start/accerelatedjk
-	url = git@github.com:rhysd/accelerated-jk.git
