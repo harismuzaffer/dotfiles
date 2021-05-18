@@ -79,3 +79,6 @@
 [submodule "vim/.vim/pack/plugins/start/fuzzysearch"]
 	path = vim/.vim/pack/plugins/start/fuzzysearch
 	url = git@github.com:ggVGc/vim-fuzzysearch.git
+[submodule "vim/.vim/pack/plugins/start/quickscope"]
+	path = vim/.vim/pack/plugins/start/quickscope
+	url = git@github.com:unblevable/quick-scope.git
