@@ -82,3 +82,6 @@
 [submodule "vim/.vim/pack/plugins/start/undotree"]
 	path = vim/.vim/pack/plugins/start/undotree
 	url = git@github.com:mbbill/undotree.git
+[submodule "vim/.vim/pack/plugins/start/vimesearch"]
+	path = vim/.vim/pack/plugins/start/vimesearch
+	url = git@github.com:eugen0329/vim-esearch.git
