@@ -59,6 +59,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> <Leader>gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+" for refactoring. This needs external tools. e.g. for python, installing
+" coc-pyright is enough
+nmap <leader>rn <Plug>(coc-rename)
 
 
 " navigate diagnostics
