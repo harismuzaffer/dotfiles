@@ -21,6 +21,11 @@ set sidescroll=1
 nnoremap zl 10zl
 nnoremap zh 10zh
 
+" signs will be shown in the number column. Without setting this, there would
+" a column which shows the line number and there would a separete column for
+" signs. Signs are used for purposes like git gutter, diasgnosis
+set signcolumn=number
+
 " cursor always be at least 4 lines away from the top or bottom of the window
 set scrolloff=4
 
