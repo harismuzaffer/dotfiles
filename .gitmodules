@@ -85,3 +85,6 @@
 [submodule "vim/.vim/pack/plugins/start/vimagriculture"]
 	path = vim/.vim/pack/plugins/start/vimagriculture
 	url = git@github.com:jesseleite/vim-agriculture.git
+[submodule "vim/.vim/pack/plugins/start/leaderf"]
+	path = vim/.vim/pack/plugins/start/leaderf
+	url = git@github.com:Yggdroot/LeaderF.git
