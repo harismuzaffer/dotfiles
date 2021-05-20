@@ -35,7 +35,7 @@ nnoremap <leader>tb :BTags<CR>
 nnoremap <leader>tp :Tags<CR>
 
 let g:fzf_layout = { 'window': { 'width': 0.97, 'height': 0.80 } }
-let $FZF_DEFAULT_OPTS="--preview-window 'right:57%:wrap' --preview 'bat --style=numbers --line-range :300 {}'
+let $FZF_DEFAULT_OPTS="--preview-window 'right:50%:wrap' --preview 'bat --style=numbers --line-range :300 {}'
             \ --bind ctrl-y:preview-up,ctrl-e:preview-down,
             \ctrl-b:preview-page-up,ctrl-f:preview-page-down,
             \ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down,
