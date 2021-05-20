@@ -164,6 +164,12 @@ nnoremap <M-Up> 7k
 nnoremap <M-Right> 25l
 nnoremap <M-Left> 25h
 
+" lines and characters movemnt for visual mode
+vnoremap <M-Down> 7j
+vnoremap <M-Up> 7k
+vnoremap <M-Right> 25l
+vnoremap <M-Left> 25h
+
 " lines and characters movemnt for insert mode
 inoremap <M-Down> <C-o>7j
 inoremap <M-Up> <C-o>7k
@@ -175,6 +181,12 @@ nnoremap <S-M-Down> 3j
 nnoremap <S-M-Up> 3k
 nnoremap <S-M-Right> 10l
 nnoremap <S-M-Left> 10h
+
+" lines and characters movemnt for visual  mode - short
+vnoremap <S-M-Down> 3j
+vnoremap <S-M-Up> 3k
+vnoremap <S-M-Right> 10l
+vnoremap <S-M-Left> 10h
 
 " lines and characters movemnt for insert mode - short
 inoremap <S-M-Down> <C-o>3j
