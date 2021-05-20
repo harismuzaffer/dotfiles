@@ -46,6 +46,12 @@ let $FZF_DEFAULT_OPTS="--preview-window 'right:50%:wrap' --preview 'bat --style=
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" RgRaw - vimagriculture
+nmap <Leader>/ <Plug>RgRawSearch
+vmap <Leader>// <Plug>RgRawVisualSelection
+nmap <Leader>/// <Plug>RgRawWordUnderCursor
+
+
 " toggle tags window
 nmap <F8> :TagbarToggle<CR>
 
