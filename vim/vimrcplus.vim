@@ -61,7 +61,7 @@ nmap <F8> :TagbarToggle<CR>
 
 " coc.nvim config starts
 " GoTo code navigation for cocvim
-nmap <silent> <Leader>gd <Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> <Leader>gr <Plug>(coc-references)
