@@ -18,8 +18,6 @@ set foldlevel=9999
 
 " scroll horizantally
 set sidescroll=1
-nnoremap zl 10zl
-nnoremap zh 10zh
 
 " signs will be shown in the number column. Without setting this, there would
 " a column which shows the line number and there would a separete column for
@@ -194,9 +192,16 @@ inoremap <S-M-Up> <C-o>3k
 inoremap <S-M-Right> <C-o>10l
 inoremap <S-M-Left> <C-o>10h
 
+" horizantal scroll
+nnoremap zl 10zl
+nnoremap zh 10zh
+
 " Keep next/pre search results at the center of screen
 nnoremap n nzz
 nnoremap N Nzz
+
+" open file explorer
+nnoremap <Leader>f :Ex<CR> 
 
 " delete the current buffer
 nnoremap <Leader>d :bd<CR>
