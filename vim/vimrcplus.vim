@@ -29,10 +29,10 @@ nnoremap <silent> <Leader>gdd :Tags <C-R><C-W><CR>
 nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
 
 " browse tags in the buffer
-nnoremap <leader>tb :BTags<CR>
+nnoremap <leader>b :BTags<CR>
 
 " browse tags in the project
-nnoremap <leader>tp :Tags<CR>
+nnoremap <leader>p :Tags<CR>
 
 let g:fzf_layout = { 'window': { 'width': 0.97, 'height': 0.80 } }
 let $FZF_DEFAULT_OPTS="--preview-window 'right:50%:wrap'
