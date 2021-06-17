@@ -121,3 +121,6 @@ let g:ale_lint_on_insert_leave = 0
 " if you don't want linters to run on opening a file
 " let g:ale_lint_on_enter = 1
 
+" doge: documentation generator
+let g:doge_enable_mappings = 0
+nmap <Leader>gd <Plug>(doge-generate)
