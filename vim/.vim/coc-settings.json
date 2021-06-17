@@ -2,5 +2,6 @@
     "suggest.noselect": false,
     "coc.preferences.noselect": false,
     "coc.source.buffer.enable": false,
-    "jedi.completion.disableSnippets": true
+    "jedi.completion.disableSnippets": true,
+    "rust-analyzer.serverPath": "/home/tux/.local/bin/rust-analyzer"
 }
