@@ -20,7 +20,7 @@ set ttimeoutlen=2
 " mapping for fzf to open files and buffers
 nnoremap <C-P> :Files<CR>
 nnoremap <Leader>l :Buffers<CR>
-nnoremap <space> :Rg<CR>
+nnoremap <CR> :Rg<CR>
 
 " go to def using fzf tags
 nnoremap <silent> <Leader>gdd :Tags <C-R><C-W><CR>
@@ -29,10 +29,10 @@ nnoremap <silent> <Leader>gdd :Tags <C-R><C-W><CR>
 nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
 
 " browse tags in the buffer
-nnoremap <leader>b :BTags<CR>
+nnoremap <space> :BTags<CR>
 
 " browse tags in the project
-nnoremap <leader>p :Tags<CR>
+nnoremap <leader><space> :Tags<CR>
 
 let g:fzf_layout = { 'window': { 'width': 0.97, 'height': 0.80 } }
 let $FZF_DEFAULT_OPTS="--preview-window 'right:50%:wrap'
