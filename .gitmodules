@@ -88,6 +88,3 @@
 [submodule "vim/.vim/pack/syntax/start/vimdoge"]
 	path = vim/.vim/pack/syntax/start/vimdoge
 	url = git@github.com:kkoomen/vim-doge.git
-[submodule "vim/.vim/pack/colors/start/srcery"]
-	path = vim/.vim/pack/colors/start/srcery
-	url = git@github.com:srcery-colors/srcery-vim.git
