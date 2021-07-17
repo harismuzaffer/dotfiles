@@ -88,3 +88,6 @@
 [submodule "vim/.vim/pack/syntax/start/vimdoge"]
 	path = vim/.vim/pack/syntax/start/vimdoge
 	url = git@github.com:kkoomen/vim-doge.git
+[submodule "vim/.vim/pack/plugins/start/telescope"]
+	path = vim/.vim/pack/plugins/start/telescope
+	url = git@github.com:nvim-telescope/telescope.nvim.git
