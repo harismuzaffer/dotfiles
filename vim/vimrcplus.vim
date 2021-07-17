@@ -51,12 +51,12 @@ nmap <Leader>/ :RgRaw -F
 vmap <Leader>// <Plug>RgRawVisualSelection
 nmap <Leader>/// <Plug>RgRawWordUnderCursor
 
-
 " toggle tags window
 nmap <F8> :TagbarToggle<CR>
 
 " toggle Vista
 nmap <F7> :Vista!!<CR>
+
 "COC setting starts here
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -121,7 +121,7 @@ if (executable("jq"))
 endif
 
 " for gutentags, exlcude these file types
-let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.js', '*.yml', '*.json', '*.scss', '*.less', 'node_modules']
+let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.yml', '*.json', '*.scss', '*.less', 'node_modules']
 " cache dir for gutentags
 let g:gutentags_cache_dir = '~/.gutentags'
 
