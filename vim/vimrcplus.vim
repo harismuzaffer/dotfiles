@@ -55,6 +55,8 @@ nmap <Leader>/// <Plug>RgRawWordUnderCursor
 " toggle tags window
 nmap <F8> :TagbarToggle<CR>
 
+" toggle Vista
+nmap <F7> :Vista!!<CR>
 "COC setting starts here
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
