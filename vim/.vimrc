@@ -202,6 +202,8 @@ nnoremap N Nzz
 
 " open file explorer
 nnoremap <Leader>f :Ex<CR> 
+" return to file explorer
+nnoremap <Leader>fr :Ex<CR> 
 
 " delete the current buffer
 nnoremap <Leader>d :bd<CR>
