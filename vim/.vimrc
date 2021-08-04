@@ -142,6 +142,9 @@ nnoremap <F5> :tabnew<CR>:vimgrep<space>
 " open buffer list. Upon inputting buffer number, that buffer will open
 nnoremap <F6> :buffers<CR>:buffer<Space>
 
+" toggle alternate file
+nmap <C-S> :e#<CR>
+
 " open quickfix window
 nnoremap <Leader>q :copen<CR>
 
