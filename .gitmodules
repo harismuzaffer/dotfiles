@@ -88,3 +88,9 @@
 [submodule "vim/.vim/pack/syntax/start/vimdoge"]
 	path = vim/.vim/pack/syntax/start/vimdoge
 	url = git@github.com:kkoomen/vim-doge.git
+[submodule "vim/.vim/pack/plugins/start/dadbod"]
+	path = vim/.vim/pack/plugins/start/dadbod
+	url = git@github.com:tpope/vim-dadbod.git
+[submodule "vim/.vim/pack/plugins/start/dadbodui"]
+	path = vim/.vim/pack/plugins/start/dadbodui
+	url = git@github.com:kristijanhusak/vim-dadbod-ui.git
