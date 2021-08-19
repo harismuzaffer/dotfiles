@@ -1,5 +1,6 @@
 {
     "suggest.noselect": false,
     "coc.preferences.noselect": false,
-    "coc.source.buffer.enable": false
+    "coc.source.buffer.enable": false,
+    "rust-analyzer.serverPath": "/home/tux/.local/bin/rust-analyzer"
 }
