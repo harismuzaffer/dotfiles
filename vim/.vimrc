@@ -276,4 +276,5 @@ endfunction
 
 " non minimal settings"
 
-call SourceIfExists("~/vimrcplus.vim")
+call SourceIfExists("~/.vim/plug.vim")
+call SourceIfExists("~/.vim/vimrcplus.vim")
