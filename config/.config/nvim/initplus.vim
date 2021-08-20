@@ -94,7 +94,7 @@ vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(
 
 
 " get file history(git) using tig
-nnoremap <Leader>h :!tig %<CR>
+nnoremap <Leader>h :terminal tig %<CR>
 
 " nnn file manager
 nnoremap <silent> <leader>n :NnnPicker<CR>
