@@ -38,5 +38,6 @@ Plug 'kkoomen/vim-doge'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
