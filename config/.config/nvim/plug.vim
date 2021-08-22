@@ -32,12 +32,13 @@ Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar'
 Plug 'kkoomen/vim-doge'
 Plug 'alvan/vim-closetag'
-
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
+Plug 'romgrk/nvim-treesitter-context'
 
 " colors
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
