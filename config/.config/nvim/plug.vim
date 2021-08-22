@@ -31,6 +31,7 @@ Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar'
 Plug 'kkoomen/vim-doge'
+Plug 'alvan/vim-closetag'
 
 
 " colors
