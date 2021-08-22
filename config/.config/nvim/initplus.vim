@@ -135,3 +135,8 @@ let g:ale_lint_on_insert_leave = 0
 let g:doge_enable_mappings = 0
 nmap <Leader>gd <Plug>(doge-generate)
 
+" airline: disable z section and disable whitespace extension(takes lot of
+" space)
+let g:airline_section_z = ''
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_theme='powerlineish'
