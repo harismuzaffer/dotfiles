@@ -64,8 +64,8 @@ nmap <F7> :Vista!!<CR>
 " coc.nvim config starts
 " GoTo code navigation for cocvim
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> <Leader>gy <Plug>(coc-type-definition)
+nmap <silent> <Leader>gi <Plug>(coc-implementation)
 nmap <silent> <Leader>gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 " for refactoring. This needs external tools. e.g. for python, installing
