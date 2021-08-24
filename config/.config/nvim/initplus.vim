@@ -112,6 +112,9 @@ nnoremap <leader>hd :SignifyDiff<cr>
 nnoremap <leader>hp :SignifyHunkDiff<cr>
 nnoremap <leader>hu :SignifyHunkUndo<cr>
 
+" git-blame.nvim
+let g:gitblame_enabled = 0
+nnoremap <Leader>gb :GitBlameToggle<CR>
 " fuzzysearch
 nnoremap // :FuzzySearch<CR>
 
