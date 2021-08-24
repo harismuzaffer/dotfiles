@@ -35,6 +35,8 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
 Plug 'romgrk/nvim-treesitter-context'
 Plug 'windwp/nvim-ts-autotag'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'f-person/git-blame.nvim'
 
 " colors
 Plug 'gruvbox-community/gruvbox'
