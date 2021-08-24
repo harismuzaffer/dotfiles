@@ -2,6 +2,9 @@ set bg=dark
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox 
 
+" this is being overridden by the theme, so putting it after setting theme
+hi Conceal ctermfg=242 guifg=#6c6c6c
+
 " If you have vim >=8.0 or Neovim >= 0.1.5
 if (has("termguicolors"))
  set termguicolors
