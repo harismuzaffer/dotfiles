@@ -23,7 +23,7 @@ set ttimeoutlen=2
 " mapping for fzf to open files and buffers
 nnoremap <C-P> :Files<CR>
 nnoremap <Leader>l :Buffers<CR>
-nnoremap <CR> :Rg<CR>
+nnoremap <Leader>ra :Rg<CR>
 
 " go to def using fzf tags
 nnoremap <silent> <Leader>gdd :Tags <C-R><C-W><CR>
