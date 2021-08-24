@@ -115,6 +115,7 @@ nnoremap <leader>hu :SignifyHunkUndo<cr>
 " git-blame.nvim
 let g:gitblame_enabled = 0
 nnoremap <Leader>gb :GitBlameToggle<CR>
+
 " fuzzysearch
 nnoremap // :FuzzySearch<CR>
 
@@ -186,5 +187,10 @@ require'nvim-treesitter.configs'.setup {
   autotag = {
     enable = true,
   }
+}
+
+require("indent_blankline").setup {
+    char = "|",
+    buftype_exclude = {"terminal"}
 }
 EOS
