@@ -13,7 +13,6 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'liuchengxu/vista.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'psliwka/vim-smoothie'
-Plug 'easymotion/vim-easymotion'
 Plug 'vimwiki/vimwiki'
 Plug 'RRethy/vim-illuminate'
 Plug 'mhinz/vim-signify'
@@ -23,6 +22,7 @@ Plug 'jesseleite/vim-agriculture'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'pechorin/any-jump.vim'
+Plug 'ggandor/lightspeed.nvim'
 
 " syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
