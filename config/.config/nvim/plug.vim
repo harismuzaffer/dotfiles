@@ -28,7 +28,7 @@ Plug 'pechorin/any-jump.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-commentary'
-Plug 'machakann/vim-sandwich'
+Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'kkoomen/vim-doge'
 Plug 'nvim-treesitter/nvim-treesitter'
