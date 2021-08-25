@@ -26,7 +26,7 @@ Plug 'pechorin/any-jump.vim'
 
 " syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
+Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-sandwich'
 Plug 'majutsushi/tagbar'
