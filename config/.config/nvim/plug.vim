@@ -37,6 +37,8 @@ Plug 'romgrk/nvim-treesitter-context'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'f-person/git-blame.nvim'
+Plug 'kevinhwang91/nvim-hlslens'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 " colors
 Plug 'gruvbox-community/gruvbox'
