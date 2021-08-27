@@ -23,6 +23,7 @@ Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'pechorin/any-jump.vim'
 Plug 'ggandor/lightspeed.nvim'
+Plug 'nacro90/numb.nvim'
 
 " syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

@@ -193,4 +193,6 @@ require("indent_blankline").setup {
     char = "|",
     buftype_exclude = {"terminal"}
 }
+
+require('numb').setup()
 EOS
