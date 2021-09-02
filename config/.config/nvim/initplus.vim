@@ -128,7 +128,7 @@ if (executable("jq"))
 endif
 
 " for gutentags, exlcude these file types
-let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.yml', '*.json', '*.scss', '*.less', 'node_modules']
+let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.yml', '*.json', '*.scss', '*.less', 'node_modules', '*.pyc']
 " cache dir for gutentags
 let g:gutentags_cache_dir = '~/.gutentags'
 
