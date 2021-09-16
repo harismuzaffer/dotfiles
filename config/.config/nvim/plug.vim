@@ -27,7 +27,7 @@ Plug 'nacro90/numb.nvim'
 
 " syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'cohama/lexima.vim'
+Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
