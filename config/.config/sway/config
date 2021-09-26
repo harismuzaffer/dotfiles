@@ -87,7 +87,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
     bindsym $mod+Shift+d exec dmenu_run
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
