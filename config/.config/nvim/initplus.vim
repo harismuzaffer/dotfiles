@@ -124,7 +124,7 @@ let g:Illuminate_ftwhitelist = ['javascript', 'python', 'rust']
 
 " jq command to parse json
 if (executable("jq"))
-    nnoremap <Leader>jq :%! jq .<CR>
+    nnoremap <Leader>jq :terminal jq .<CR>
 endif
 
 " for gutentags, exlcude these file types
