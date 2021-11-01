@@ -40,6 +40,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'f-person/git-blame.nvim'
 Plug 'kevinhwang91/nvim-hlslens'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'SmiteshP/nvim-gps' 
 
 " colors
 Plug 'gruvbox-community/gruvbox'
