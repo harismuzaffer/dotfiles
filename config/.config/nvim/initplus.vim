@@ -186,4 +186,22 @@ require("indent_blankline").setup {
 }
 
 require('numb').setup()
+
+require'lualine'.setup {
+  options = {
+    icons_enabled = true,
+    theme = 'powerline_dark',
+    component_separators = { left = 'ᚠ', right = 'ᚠ'},
+    section_separators = { left = ' ', right = ' '},
+  },
+  sections = {
+    lualine_a = {},
+    lualine_b = {'branch', 'diff'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'filetype'},
+    lualine_y = {'location', '%L'},
+    lualine_z = {'hostname'}
+  },
+}
+
 EOS

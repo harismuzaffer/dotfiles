@@ -43,5 +43,6 @@ Plug 'Vimjas/vim-python-pep8-indent'
 
 " colors
 Plug 'gruvbox-community/gruvbox'
+Plug 'nvim-lualine/lualine.nvim'
 
 call plug#end()
