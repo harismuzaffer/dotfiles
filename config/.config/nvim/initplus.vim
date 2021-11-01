@@ -204,4 +204,16 @@ require'lualine'.setup {
   },
 }
 
+require("nvim-gps").setup()
+
+local gps = require("nvim-gps")
+
+require("lualine").setup({
+sections = {
+    lualine_x = {
+        { gps.get_location, condition = gps.is_available },
+        }
+    }
+})
+
 EOS
