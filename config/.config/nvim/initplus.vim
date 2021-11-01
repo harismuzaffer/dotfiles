@@ -171,8 +171,9 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require'treesitter-context'.setup{
-    enable = false, -- Enable this plugin (Can be enabled/disabled later via commands)
+    enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
     throttle = true, -- Throttles plugin updates (may improve performance)
+    max_lines = 1,
 }
 
 require'nvim-treesitter.configs'.setup {
