@@ -43,7 +43,5 @@ Plug 'Vimjas/vim-python-pep8-indent'
 
 " colors
 Plug 'gruvbox-community/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
