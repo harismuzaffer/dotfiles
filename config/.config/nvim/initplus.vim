@@ -193,17 +193,26 @@ require'lualine'.setup {
   options = {
     icons_enabled = true,
     theme = 'powerline_dark',
-    component_separators = { left = 'ᚠ', right = 'ᚠ'},
-    section_separators = { left = ' ', right = ' '},
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
   },
   sections = {
     lualine_a = {},
     lualine_b = {'branch', 'diff'},
-    lualine_c = {'filename'},
-    lualine_x = {'encoding', 'filetype'},
+    lualine_c = {
+        {
+                'filename',
+                file_status = true,  -- displays file status (readonly status, modified status)
+                path = 1,            -- 0 = just filename, 1 = relative path, 2 = absolute path
+                shorting_target = 40 -- Shortens path to leave 40 space in the window
+                -- for other components. Terrible name any suggestions?
+        }
+    },
+    lualine_x = {},
     lualine_y = {'location', '%L'},
-    lualine_z = {'hostname'}
+    lualine_z = {}
   },
+  extensions = {'quickfix', 'fugitive', 'fzf', 'nerdtree'}
 }
 
 require("nvim-gps").setup()
@@ -214,6 +223,7 @@ require("lualine").setup({
 sections = {
     lualine_x = {
         { gps.get_location, condition = gps.is_available },
+        'filetype'
         }
     }
 })
