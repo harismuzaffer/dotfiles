@@ -209,7 +209,7 @@ require'lualine'.setup {
         }
     },
     lualine_x = {},
-    lualine_y = {'location', '%L'},
+    lualine_y = {'%l:%c|%L'},
     lualine_z = {}
   },
   extensions = {'quickfix', 'fugitive', 'fzf', 'nerdtree'}
