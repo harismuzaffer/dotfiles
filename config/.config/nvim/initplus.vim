@@ -218,4 +218,6 @@ sections = {
     }
 })
 
+require'nvim-web-devicons'.setup {}
+
 EOS
