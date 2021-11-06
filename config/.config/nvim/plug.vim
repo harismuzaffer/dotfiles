@@ -46,5 +46,6 @@ Plug 'SmiteshP/nvim-gps'
 Plug 'gruvbox-community/gruvbox'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'p00f/nvim-ts-rainbow'
 
 call plug#end()
