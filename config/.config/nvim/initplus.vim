@@ -189,6 +189,16 @@ require("nvim-treesitter.configs").setup {
   }
 }
 
+require'nvim-treesitter.configs'.setup {
+    textsubjects = {
+        enable = true,
+        keymaps = {
+            ['.'] = 'textsubjects-smart',
+            [';'] = 'textsubjects-container-outer',
+        }
+    },
+}
+
 require("indent_blankline").setup {
     char = "|",
     buftype_exclude = {"terminal"}
