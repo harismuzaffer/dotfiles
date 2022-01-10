@@ -21,7 +21,7 @@ set ttimeoutlen=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " mapping for fzf to open files and buffers
-nnoremap <C-P> :Files<CR>
+nnoremap <C-P> :GFiles<CR>
 nnoremap <Leader>l :Buffers<CR>
 nnoremap <Leader>ra :Rg<CR>
 
