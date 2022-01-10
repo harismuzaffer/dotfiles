@@ -253,15 +253,6 @@ function! AutoHighlightToggle()
  endif
 endfunction
 
-" coc vim function to show documentation
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
 " Function to source only if file exists
 function! SourceIfExists(file)
   if filereadable(expand(a:file))
