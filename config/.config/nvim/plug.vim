@@ -25,6 +25,8 @@ Plug 'pechorin/any-jump.vim'
 Plug 'ggandor/lightspeed.nvim'
 Plug 'nacro90/numb.nvim'
 Plug 'RRethy/nvim-treesitter-textsubjects'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'ruifm/gitlinker.nvim'
 
 " syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

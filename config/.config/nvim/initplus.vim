@@ -250,4 +250,6 @@ sections = {
 
 require'nvim-web-devicons'.setup {}
 
+require"gitlinker".setup()
+
 EOS
