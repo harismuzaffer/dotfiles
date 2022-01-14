@@ -27,6 +27,7 @@ Plug 'nacro90/numb.nvim'
 Plug 'RRethy/nvim-treesitter-textsubjects'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'ruifm/gitlinker.nvim'
+Plug 'rhysd/git-messenger.vim'
 
 " syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
