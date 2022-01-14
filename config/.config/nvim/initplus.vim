@@ -123,7 +123,9 @@ let g:gitblame_enabled = 0
 nnoremap <Leader>gb :GitBlameToggle<CR>
 
 " git messenger for showing commit of current line information in a popup
+let g:git_messenger_no_default_mappings = v:true
 let git_messenger_always_into_popup = v:true
+nmap <C-m> <Plug>(git-messenger)
 
 " fuzzysearch
 nnoremap // :FuzzySearch<CR>
