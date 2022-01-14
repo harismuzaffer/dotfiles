@@ -257,4 +257,7 @@ require'nvim-web-devicons'.setup {}
 
 require"gitlinker".setup()
 
+require('pretty-fold').setup{}
+require('pretty-fold.preview').setup{}
+
 EOS
