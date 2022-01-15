@@ -56,9 +56,6 @@ set softtabstop=4
 " show line numbers
 set nu
 
-"show relatuve line numebrs
-set relativenumber
-
 " expand tabs to spaces
 set expandtab
 
