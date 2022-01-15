@@ -84,9 +84,8 @@ set path=.,,**
 " syntax highlighting
 syntax on
 
-" Set grep program. For Ack settings - use ripgrep as search program(default is usually grep)
+" Set grep program
 if executable('rg')
-    let g:ackprg = 'rg --vimgrep'
     set gp=rg\ --vimgrep\ --no-heading gfm=%f:%l:%c:%m,%f:%l%m,%f\ \ %l%m|
 endif
 
