@@ -7,7 +7,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " productivity
 Plug 'junegunn/fzf.vim'
-Plug 'dyng/ctrlsf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'liuchengxu/vista.vim'
 Plug 'tpope/vim-fugitive'
@@ -19,8 +18,6 @@ Plug 'ggVGc/vim-fuzzysearch'
 Plug 'jesseleite/vim-agriculture'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
-Plug 'pechorin/any-jump.vim'
-Plug 'ggandor/lightspeed.nvim'
 Plug 'nacro90/numb.nvim'
 Plug 'RRethy/nvim-treesitter-textsubjects'
 Plug 'nvim-lua/plenary.nvim'
