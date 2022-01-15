@@ -122,7 +122,7 @@ nnoremap // :FuzzySearch<CR>
 
 " jq command to parse json
 if (executable("jq"))
-    nnoremap <Leader>jq :terminal jq .<CR>
+    nnoremap <Leader>jq :%!jq .<CR>
 endif
 
 " for gutentags, exlcude these file types
