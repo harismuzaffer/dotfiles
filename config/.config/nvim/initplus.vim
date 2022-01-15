@@ -19,6 +19,7 @@ set rtp+=$fzf
 
 " mapping for fzf to open files and buffers
 nnoremap <C-P> :GFiles<CR>
+nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>l :Buffers<CR>
 nnoremap <Leader>ra :Rg<CR>
 
