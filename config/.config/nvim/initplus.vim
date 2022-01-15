@@ -13,9 +13,6 @@ endif
 " required for fzf. Make sure you have fzf path set in your bashrc, zsh etc
 set rtp+=$fzf
 
-" this is a temp hack. Pressing the escape key has a slight delay.
-set ttimeoutlen=2
-
 "FZF setting starts here
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
