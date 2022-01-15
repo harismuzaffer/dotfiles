@@ -120,6 +120,9 @@ nmap <C-m> <Plug>(git-messenger)
 " fuzzysearch
 nnoremap // :FuzzySearch<CR>
 
+" vim illuminate: whitelist only these file type
+let g:Illuminate_ftwhitelist = ['javascript', 'python', 'rust']
+
 " jq command to parse json
 if (executable("jq"))
     nnoremap <Leader>jq :%!jq .<CR>
