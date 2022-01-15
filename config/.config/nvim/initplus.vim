@@ -96,16 +96,9 @@ endfunction
 
 " COC setting ends here
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 " get file history(git) using tig
 nnoremap <Leader>h :terminal tig %<CR>
-
-" nnn file manager
-nnoremap <silent> <leader>n :NnnPicker<CR>
-"Start nnn in the current file's directory
-nnoremap <leader>nn :NnnPicker '%:p:h'<CR>
 
 " minimap mappings 
 nnoremap <Leader>mm :MinimapToggle<CR>
