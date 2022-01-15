@@ -199,6 +199,7 @@ require("indent_blankline").setup {
     buftype_exclude = {"terminal"}
 }
 
+-- Peek lines just when you intend
 require('numb').setup()
 
 require'lualine'.setup {
@@ -242,6 +243,7 @@ sections = {
 
 require'nvim-web-devicons'.setup {}
 
+-- get git(hub link) of line(s)
 require"gitlinker".setup()
 
 require('pretty-fold').setup{}
