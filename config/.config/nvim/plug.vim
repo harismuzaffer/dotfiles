@@ -24,6 +24,7 @@ Plug 'RRethy/nvim-treesitter-textsubjects'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'ruifm/gitlinker.nvim'
 Plug 'rhysd/git-messenger.vim'
+Plug 'brooth/far.vim'
 
 " syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
