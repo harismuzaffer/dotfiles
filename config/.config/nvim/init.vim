@@ -55,8 +55,6 @@ set softtabstop=4
 
 " show line numbers
 set nu
-
-"show relatuve line numebrs
 set relativenumber
 
 " expand tabs to spaces
@@ -84,9 +82,8 @@ set path=.,,**
 " syntax highlighting
 syntax on
 
-" Set grep program. For Ack settings - use ripgrep as search program(default is usually grep)
+" Set grep program
 if executable('rg')
-    let g:ackprg = 'rg --vimgrep'
     set gp=rg\ --vimgrep\ --no-heading gfm=%f:%l:%c:%m,%f:%l%m,%f\ \ %l%m|
 endif
 
@@ -251,15 +248,6 @@ function! AutoHighlightToggle()
     echo 'Highlight current word: ON'
   return 1
  endif
-endfunction
-
-" coc vim function to show documentation
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
 endfunction
 
 " Function to source only if file exists

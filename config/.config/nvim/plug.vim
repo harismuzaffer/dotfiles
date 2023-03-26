@@ -7,8 +7,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " productivity
 Plug 'junegunn/fzf.vim'
-Plug 'dyng/ctrlsf.vim'
-Plug 'mileszs/ack.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'liuchengxu/vista.vim'
 Plug 'tpope/vim-fugitive'
@@ -21,9 +19,12 @@ Plug 'ggVGc/vim-fuzzysearch'
 Plug 'jesseleite/vim-agriculture'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
-Plug 'pechorin/any-jump.vim'
-Plug 'ggandor/lightspeed.nvim'
 Plug 'nacro90/numb.nvim'
+Plug 'RRethy/nvim-treesitter-textsubjects'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'ruifm/gitlinker.nvim'
+Plug 'rhysd/git-messenger.vim'
+Plug 'brooth/far.vim'
 
 " syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -40,10 +41,14 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'f-person/git-blame.nvim'
 Plug 'kevinhwang91/nvim-hlslens'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'SmiteshP/nvim-gps' 
+Plug 'anuvyklack/pretty-fold.nvim'
+Plug 'jeetsukumaran/vim-indentwise'
 
 " colors
 Plug 'gruvbox-community/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'p00f/nvim-ts-rainbow'
 
 call plug#end()

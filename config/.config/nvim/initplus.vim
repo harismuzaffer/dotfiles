@@ -13,15 +13,13 @@ endif
 " required for fzf. Make sure you have fzf path set in your bashrc, zsh etc
 set rtp+=$fzf
 
-" this is a temp hack. Pressing the escape key has a slight delay.
-set ttimeoutlen=2
-
 "FZF setting starts here
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " mapping for fzf to open files and buffers
-nnoremap <C-P> :Files<CR>
+nnoremap <C-P> :GFiles<CR>
+nnoremap <Leader>p :Files<CR>
 nnoremap <Leader>l :Buffers<CR>
 nnoremap <Leader>ra :Rg<CR>
 
@@ -50,9 +48,8 @@ let $FZF_DEFAULT_OPTS="--preview-window 'right:50%:wrap'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " RgRaw - vimagriculture
-nmap <Leader>/ :RgRaw -F 
-vmap <Leader>// <Plug>RgRawVisualSelection
-nmap <Leader>/// <Plug>RgRawWordUnderCursor
+nmap <Leader>/ <Plug>RgRawSearch -F ""<Left>
+vmap <Leader>/ <Plug>RgRawVisualSelection
 
 " toggle tags window
 nmap <F8> :TagbarToggle<CR>
@@ -67,7 +64,7 @@ nmap <F7> :Vista!!<CR>
 " coc.nvim config starts
 " GoTo code navigation for cocvim
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> <Leader>gy <Plug>(coc-type-definition)
+nmap <silent> <Leader>gf <Plug>(coc-type-definition)
 nmap <silent> <Leader>gi <Plug>(coc-implementation)
 nmap <silent> <Leader>gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -80,9 +77,6 @@ nmap <leader>rn <Plug>(coc-rename)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
@@ -91,18 +85,20 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
+" coc vim function to show documentation
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 " COC setting ends here
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 " get file history(git) using tig
 nnoremap <Leader>h :terminal tig %<CR>
-
-" nnn file manager
-nnoremap <silent> <leader>n :NnnPicker<CR>
-"Start nnn in the current file's directory
-nnoremap <leader>nn :NnnPicker '%:p:h'<CR>
 
 " minimap mappings 
 nnoremap <Leader>mm :MinimapToggle<CR>
@@ -116,6 +112,11 @@ nnoremap <leader>hu :SignifyHunkUndo<cr>
 let g:gitblame_enabled = 0
 nnoremap <Leader>gb :GitBlameToggle<CR>
 
+" git messenger for showing commit of current line information in a popup
+let g:git_messenger_no_default_mappings = v:true
+let git_messenger_always_into_popup = v:true
+nmap <Leader>gm <Plug>(git-messenger)
+
 " fuzzysearch
 nnoremap // :FuzzySearch<CR>
 
@@ -124,7 +125,7 @@ let g:Illuminate_ftwhitelist = ['javascript', 'python', 'rust']
 
 " jq command to parse json
 if (executable("jq"))
-    nnoremap <Leader>jq :terminal jq .<CR>
+    nnoremap <Leader>jq :%!jq .<CR>
 endif
 
 " for gutentags, exlcude these file types
@@ -132,26 +133,15 @@ let g:gutentags_ctags_exclude = ['*.css', '*.html', '*.yml', '*.json', '*.scss',
 " cache dir for gutentags
 let g:gutentags_cache_dir = '~/.gutentags'
 
-" when should ALE lint
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
-" if you don't want linters to run on opening a file
-" let g:ale_lint_on_enter = 1
-
 " doge: documentation generator
 let g:doge_enable_mappings = 0
 nmap <Leader>gd <Plug>(doge-generate)
-
-" airline: disable z section and disable whitespace extension(takes lot of
-" space)
-let g:airline_section_z = ''
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline_theme='owo'
 
 lua << EOS
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
+    additional_vim_regex_highlighting = true,
   },
 }
 
@@ -179,8 +169,9 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require'treesitter-context'.setup{
-    enable = false, -- Enable this plugin (Can be enabled/disabled later via commands)
+    enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
     throttle = true, -- Throttles plugin updates (may improve performance)
+    max_lines = 1,
 }
 
 require'nvim-treesitter.configs'.setup {
@@ -189,10 +180,76 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
+require("nvim-treesitter.configs").setup {
+  rainbow = {
+    enable = true,
+    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+  }
+}
+
+require'nvim-treesitter.configs'.setup {
+    textsubjects = {
+        enable = true,
+        keymaps = {
+            ['.'] = 'textsubjects-smart',
+            [';'] = 'textsubjects-container-outer',
+        }
+    },
+}
+
 require("indent_blankline").setup {
     char = "|",
     buftype_exclude = {"terminal"}
 }
 
+-- Peek lines just when you intend
 require('numb').setup()
+
+require'lualine'.setup {
+  options = {
+    icons_enabled = true,
+    theme = 'powerline_dark',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+  },
+  sections = {
+    lualine_a = {},
+    lualine_b = {'branch', 'diff'},
+    lualine_c = {
+        {
+                'filename',
+                file_status = true,  -- displays file status (readonly status, modified status)
+                path = 1,            -- 0 = just filename, 1 = relative path, 2 = absolute path
+                shorting_target = 40 -- Shortens path to leave 40 space in the window
+                -- for other components. Terrible name any suggestions?
+        }
+    },
+    lualine_x = {},
+    lualine_y = {'%l:%c|%L'},
+    lualine_z = {}
+  },
+  extensions = {'quickfix', 'fugitive', 'fzf', 'nerdtree'}
+}
+
+require("nvim-gps").setup()
+
+local gps = require("nvim-gps")
+
+require("lualine").setup({
+sections = {
+    lualine_x = {
+        { gps.get_location, condition = gps.is_available },
+        'filetype'
+        }
+    }
+})
+
+require'nvim-web-devicons'.setup {}
+
+-- get git(hub link) of line(s)
+require"gitlinker".setup()
+
+require('pretty-fold').setup{}
+require('pretty-fold.preview').setup{}
+
 EOS
