@@ -2,6 +2,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" disable mouse completely
+set mouse=
+
 " leader key: useful to create extra set of shortcuts
 " this is special variable, so adding it at the top regardless of the section
 " it belong to
