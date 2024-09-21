@@ -203,10 +203,7 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 
-require("indent_blankline").setup {
-    char = "|",
-    buftype_exclude = {"terminal"}
-}
+require("ibl").setup()
 
 -- Peek lines just when you intend
 require('numb').setup()
