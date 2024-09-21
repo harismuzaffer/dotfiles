@@ -43,7 +43,8 @@ Plug 'f-person/git-blame.nvim'
 Plug 'kevinhwang91/nvim-hlslens'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'SmiteshP/nvim-gps' 
-Plug 'anuvyklack/pretty-fold.nvim'
+Plug 'anuvyklack/fold-preview.nvim'
+Plug 'anuvyklack/keymap-amend.nvim'
 Plug 'jeetsukumaran/vim-indentwise'
 
 " colors

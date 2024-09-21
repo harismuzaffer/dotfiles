@@ -252,7 +252,7 @@ require'nvim-web-devicons'.setup {}
 -- get git(hub link) of line(s)
 require"gitlinker".setup()
 
-require('pretty-fold').setup{}
-require('pretty-fold.preview').setup{}
+require('fold-preview').setup{}
+require('hlslens').setup()
 
 EOS
