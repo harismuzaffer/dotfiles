@@ -217,7 +217,7 @@ require'lualine'.setup {
   },
   sections = {
     lualine_a = {},
-    lualine_b = {'branch', 'diff'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {
         {
                 'filename',
@@ -225,27 +225,21 @@ require'lualine'.setup {
                 path = 1,            -- 0 = just filename, 1 = relative path, 2 = absolute path
                 shorting_target = 40 -- Shortens path to leave 40 space in the window
                 -- for other components. Terrible name any suggestions?
-        }
+        },
+        function()
+            return require("nvim-treesitter").statusline({
+                indicator_size = 150,
+                type_patterns = { "class", "function", "method" },
+                separator = "  ",
+            })
+        end
     },
-    lualine_x = {},
-    lualine_y = {'%l:%c|%L'},
-    lualine_z = {}
+    lualine_x = {"filetype"},
+    lualine_y = {'%l:%c|%L', "progress"},
+    lualine_z = {},
   },
   extensions = {'quickfix', 'fugitive', 'fzf', 'nerdtree'}
 }
-
-require("nvim-gps").setup()
-
-local gps = require("nvim-gps")
-
-require("lualine").setup({
-sections = {
-    lualine_x = {
-        { gps.get_location, condition = gps.is_available },
-        'filetype'
-        }
-    }
-})
 
 require'nvim-web-devicons'.setup {}
 
