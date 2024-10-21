@@ -226,15 +226,17 @@ require'lualine'.setup {
                 shorting_target = 40 -- Shortens path to leave 40 space in the window
                 -- for other components. Terrible name any suggestions?
         },
+    },
+    lualine_x = {
         function()
             return require("nvim-treesitter").statusline({
                 indicator_size = 150,
                 type_patterns = { "class", "function", "method" },
                 separator = "  ",
             })
-        end
+        end,
+        'filetype',
     },
-    lualine_x = {"filetype"},
     lualine_y = {'%l:%c|%L', "progress"},
     lualine_z = {},
   },
