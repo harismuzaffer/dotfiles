@@ -26,6 +26,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'ruifm/gitlinker.nvim'
 Plug 'rhysd/git-messenger.vim'
 Plug 'brooth/far.vim'
+Plug 'github/copilot.vim'
+Plug 'robitx/gp.nvim'
 
 " syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
