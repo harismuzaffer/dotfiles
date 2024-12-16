@@ -100,6 +100,10 @@ function! s:show_documentation()
   endif
 endfunction
 
+" Highlight the symbol and its references when holding the cursor
+autocmd CursorHold * silent call CocActionAsync('highlight')
+highlight CocHighlightText guibg=#333333 guifg=#ffffff
+
 " COC setting ends here
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -186,13 +190,6 @@ require'nvim-treesitter.configs'.setup {
   }
 }
 
-require("nvim-treesitter.configs").setup {
-  rainbow = {
-    enable = true,
-    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-  }
-}
-
 require'nvim-treesitter.configs'.setup {
     textsubjects = {
         enable = true,
@@ -202,6 +199,7 @@ require'nvim-treesitter.configs'.setup {
         }
     },
 }
+
 
 require("ibl").setup()
 
