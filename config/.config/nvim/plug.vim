@@ -46,6 +46,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'anuvyklack/fold-preview.nvim'
 Plug 'anuvyklack/keymap-amend.nvim'
 Plug 'jeetsukumaran/vim-indentwise'
+Plug 'fei6409/log-highlight.nvim'
 
 " colors
 Plug 'gruvbox-community/gruvbox'
