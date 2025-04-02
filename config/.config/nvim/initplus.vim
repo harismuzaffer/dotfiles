@@ -259,13 +259,18 @@ local config = {
             secret = os.getenv("OPENAI_API_KEY"),
         },
         copilot = {
-            disable = false,
+            disable = true,
             endpoint = "https://api.githubcopilot.com/chat/completions",
             secret = {
                 "bash",
                 "-c",
                 "cat ~/.config/github-copilot/apps.json | sed -e 's/.*oauth_token...//;s/\".*//'",
             },
+        },
+        anthropic = { 
+            disable = false, 
+            endpoint = "https://api.anthropic.com/v1/messages", 
+            secret = os.getenv("ANTHROPIC_API_KEY"), 
         },
     },
 
@@ -351,6 +356,16 @@ local config = {
             model = { model = "gpt-4o", temperature = 0.8, top_p = 1, n = 1 },
             -- system prompt (use this to specify the persona/role of the AI)
             system_prompt = require("gp.defaults").code_system_prompt,
+        },
+        { 
+            provider = "anthropic", 
+            name = "ChatClaude-3-7-Sonnet", 
+            chat = true, 
+            command = false, 
+            -- string with model name or table with model name and parameters 
+            model = { model = "claude-3-7-sonnet-20250219", temperature = 0.2, top_p = 0.7 }, 
+            -- system prompt (use this to specify the persona/role of the AI) 
+            system_prompt = require("gp.defaults").chat_system_prompt, 
         },
     },
 
