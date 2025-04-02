@@ -3,5 +3,6 @@
     "coc.preferences.noselect": false,
     "coc.source.buffer.enable": false,
     "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
-    "reportOptionalMemberAccess": "none"
+    "reportOptionalMemberAccess": "none",
+    "snippets.ultisnips.pythonPrompt": false
 }
