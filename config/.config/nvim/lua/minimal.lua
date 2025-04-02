@@ -118,9 +118,13 @@ map("n", "<C-W>m", "<C-W>=", opts)
 
 -- Cursor movement shortcuts
 map("n", "<M-Down>", "7j", opts)
+map("v", "<M-Down>", "7j", opts)
 map("n", "<M-Up>", "7k", opts)
+map("v", "<M-Up>", "7k", opts)
 map("n", "<M-Right>", "25l", opts)
+map("v", "<M-Right>", "25l", opts)
 map("n", "<M-Left>", "25h", opts)
+map("v", "<M-Left>", "25h", opts)
 
 -- File explorer
 map("n", "<Leader>f", ":Ex<CR>", opts)
