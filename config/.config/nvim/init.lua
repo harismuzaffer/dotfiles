@@ -19,8 +19,5 @@ require('lazy').setup('plugins')
 
 -- Other settings
 require('minimal')
-require('config.lualine')
-require('config.treesitter')
 require('mappings')
 require('lsp')
-

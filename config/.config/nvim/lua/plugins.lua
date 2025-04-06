@@ -25,6 +25,20 @@ return {
       require("numb").setup()
     end
   },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    config = function()
+      require('config.treesitter').setup()
+    end,
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+      'nvim-treesitter/nvim-treesitter-refactor',
+      'RRethy/nvim-treesitter-textsubjects',
+      'romgrk/nvim-treesitter-context',
+      'windwp/nvim-ts-autotag',
+    },
+  },
   { "RRethy/nvim-treesitter-textsubjects" },
   { "nvim-lua/plenary.nvim" },
   { 
@@ -45,9 +59,6 @@ return {
   { "tpope/vim-surround" },
   { "majutsushi/tagbar" },
   { "kkoomen/vim-doge" },
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  { "romgrk/nvim-treesitter-context" },
-  { "windwp/nvim-ts-autotag" },
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
@@ -92,7 +103,12 @@ return {
 
   -- Colors and UI
   { "gruvbox-community/gruvbox" },
-  { "nvim-lualine/lualine.nvim" },
+  {
+    "nvim-lualine/lualine.nvim",
+    config = function()
+      require('config.lualine').setup()
+    end
+  },
   { 
     "kyazdani42/nvim-web-devicons",
     config = function()
@@ -100,4 +116,3 @@ return {
     end
   }
 }
-
