@@ -62,7 +62,15 @@ return {
 
   -- Syntax Plugins
   { "neoclide/coc.nvim", branch = "release" },
-  { "jiangmiao/auto-pairs" },
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup({
+          ignored_next_char = [=[[%w%%%'%[%"%.%`%$]]=],
+          })
+      end,
+  },
   { "tpope/vim-commentary" },
   { "tpope/vim-surround" },
   { "majutsushi/tagbar" },
