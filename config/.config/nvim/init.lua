@@ -20,4 +20,4 @@ require('lazy').setup('plugins')
 -- Other settings
 require('minimal')
 require('mappings')
-require('lsp')
+require("config.lsp").setup()
