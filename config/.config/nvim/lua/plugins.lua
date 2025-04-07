@@ -51,6 +51,14 @@ return {
   { "brooth/far.vim" },
   { "github/copilot.vim" },
   { "robitx/gp.nvim" },
+  {
+    "blink.cmp",
+    opts = function()
+      local config = require("config.blink")
+      return config.opts
+    end,
+    opts_extend = require("config.blink").opts_extend,
+  },
 
   -- Syntax Plugins
   { "neoclide/coc.nvim", branch = "release" },

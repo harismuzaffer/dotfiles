@@ -51,26 +51,26 @@ vim.api.nvim_set_keymap("n", "<F8>", ":TagbarToggle<CR>", { noremap = true, sile
 vim.api.nvim_set_keymap("n", "<F7>", ":Vista!!<CR>", { noremap = true, silent = true })
 
 -- CoC settings
-vim.api.nvim_set_keymap("i", "<CR>", "coc#pum#visible() ? coc#pum#confirm() : '<C-g>u<CR><C-r>=coc#on_enter()<CR>'", { noremap = true, expr = true, silent = true })
+-- vim.api.nvim_set_keymap("i", "<CR>", "coc#pum#visible() ? coc#pum#confirm() : '<C-g>u<CR><C-r>=coc#on_enter()<CR>'", { noremap = true, expr = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", { noremap = false, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>gf", "<Plug>(coc-type-definition)", { noremap = false, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>gi", "<Plug>(coc-implementation)", { noremap = false, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>gr", "<Plug>(coc-references)", { noremap = false, silent = true })
-vim.api.nvim_set_keymap("n", "K", ":lua show_documentation()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>rn", "<Plug>(coc-rename)", { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>gf", "<Plug>(coc-type-definition)", { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>gi", "<Plug>(coc-implementation)", { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>gr", "<Plug>(coc-references)", { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap("n", "K", ":lua show_documentation()<CR>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<Leader>rn", "<Plug>(coc-rename)", { noremap = false, silent = true })
 
 -- Navigate diagnostics
-vim.api.nvim_set_keymap("n", "[g", "<Plug>(coc-diagnostic-prev)", { noremap = false, silent = true })
-vim.api.nvim_set_keymap("n", "]g", "<Plug>(coc-diagnostic-next)", { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap("n", "[g", "<Plug>(coc-diagnostic-prev)", { noremap = false, silent = true })
+-- vim.api.nvim_set_keymap("n", "]g", "<Plug>(coc-diagnostic-next)", { noremap = false, silent = true })
 
 -- Remap scroll in float windows/popups
-vim.api.nvim_set_keymap("n", "<C-f>", "coc#float#has_scroll() ? coc#float#scroll(1, 3) : '<C-f>'", { noremap = true, expr = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-b>", "coc#float#has_scroll() ? coc#float#scroll(0, 3) : '<C-b>'", { noremap = true, expr = true, silent = true })
-vim.api.nvim_set_keymap("i", "<C-f>", "coc#float#has_scroll() ? '<c-r>=coc#float#scroll(1)<cr>' : '<Right>'", { noremap = true, expr = true, silent = true })
-vim.api.nvim_set_keymap("i", "<C-b>", "coc#float#has_scroll() ? '<c-r>=coc#float#scroll(0)<cr>' : '<Left>'", { noremap = true, expr = true, silent = true })
-vim.api.nvim_set_keymap("v", "<C-f>", "coc#float#has_scroll() ? coc#float#scroll(1, 3) : '<C-f>'", { noremap = true, expr = true, silent = true })
-vim.api.nvim_set_keymap("v", "<C-b>", "coc#float#has_scroll() ? coc#float#scroll(0, 3) : '<C-b>'", { noremap = true, expr = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-f>", "coc#float#has_scroll() ? coc#float#scroll(1, 3) : '<C-f>'", { noremap = true, expr = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "<C-b>", "coc#float#has_scroll() ? coc#float#scroll(0, 3) : '<C-b>'", { noremap = true, expr = true, silent = true })
+-- vim.api.nvim_set_keymap("i", "<C-f>", "coc#float#has_scroll() ? '<c-r>=coc#float#scroll(1)<cr>' : '<Right>'", { noremap = true, expr = true, silent = true })
+-- vim.api.nvim_set_keymap("i", "<C-b>", "coc#float#has_scroll() ? '<c-r>=coc#float#scroll(0)<cr>' : '<Left>'", { noremap = true, expr = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "<C-f>", "coc#float#has_scroll() ? coc#float#scroll(1, 3) : '<C-f>'", { noremap = true, expr = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "<C-b>", "coc#float#has_scroll() ? coc#float#scroll(0, 3) : '<C-b>'", { noremap = true, expr = true, silent = true })
 
 -- Function to show documentation
 function show_documentation()
