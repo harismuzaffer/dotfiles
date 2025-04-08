@@ -133,6 +133,7 @@ return {
 
   -- Colors and UI
   { "gruvbox-community/gruvbox" },
+  { "sainnhe/gruvbox-material" },
   {
     "nvim-lualine/lualine.nvim",
     config = function()
