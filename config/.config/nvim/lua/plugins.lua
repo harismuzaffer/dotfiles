@@ -52,7 +52,7 @@ return {
   { "github/copilot.vim" },
   { "robitx/gp.nvim" },
   {
-    "blink.cmp",
+    "saghen/blink.cmp",
     opts = function()
       local config = require("config.blink")
       return config.opts
