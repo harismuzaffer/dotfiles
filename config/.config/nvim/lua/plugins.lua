@@ -130,5 +130,12 @@ return {
     config = function()
       require("nvim-web-devicons").setup {}
     end
-  }
+  },
+  { "onsails/lspkind.nvim" },
+  {
+    "xzbdmw/colorful-menu.nvim",
+    config = function()
+      require('config.colorful_menu').setup()
+    end
+  },
 }
