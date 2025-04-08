@@ -53,6 +53,20 @@ return {
   { "robitx/gp.nvim" },
   {
     "saghen/blink.cmp",
+    dependencies = {
+      {
+        "xzbdmw/colorful-menu.nvim",
+        config = function()
+          require("config.colorful_menu").setup() -- Load your colorful-menu config
+        end,
+      },
+      {
+        "onsails/lspkind.nvim",
+        config = function()
+          require("config.lspkind").setup() -- Load your lspkind config
+        end,
+      },
+    },
     opts = function()
       local config = require("config.blink")
       return config.opts
@@ -129,13 +143,6 @@ return {
     "kyazdani42/nvim-web-devicons",
     config = function()
       require("nvim-web-devicons").setup {}
-    end
-  },
-  { "onsails/lspkind.nvim" },
-  {
-    "xzbdmw/colorful-menu.nvim",
-    config = function()
-      require('config.colorful_menu').setup()
     end
   },
 }

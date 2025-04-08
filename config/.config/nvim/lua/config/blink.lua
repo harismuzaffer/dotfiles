@@ -18,8 +18,8 @@ M.opts = {
     menu = {
       draw = {
         columns = {
-          { "label", gap = 1 },
-          { "kind_icon" }, 
+          { "label", "label_description", gap = 1 },
+          { "kind_icon", "kind" }, 
         },
         components = {
           label = {
@@ -30,7 +30,7 @@ M.opts = {
               return require("colorful-menu").blink_components_highlight(ctx)
             end,
           },
-        }
+        },
       }
     },
 
