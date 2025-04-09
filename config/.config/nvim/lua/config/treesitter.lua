@@ -24,25 +24,9 @@ function M.setup()
           smart_rename = "grr",
         },
       },
-      highlight_definitions = {
-        enable = true,
-        -- Set to false if you have an `updatetime` of ~100.
-        clear_on_cursor_move = true,
-      },
     },
     autotag = {
       enable = true,
-    },
-    textobjects = {
-      lsp_interop = {
-        enable = true,
-        border = 'none',
-        floating_preview_opts = {},
-        peek_definition_code = {
-          ["<leader>df"] = "@function.outer",
-          ["<leader>dF"] = "@class.outer",
-        },
-      },
     },
     textsubjects = {
       enable = true,

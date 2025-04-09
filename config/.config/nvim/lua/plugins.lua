@@ -75,6 +75,16 @@ return {
   },
 
   -- Syntax Plugins
+  {
+    'tzachar/local-highlight.nvim',
+    config = function()
+      require('local-highlight').setup({
+        animate = {
+          enabled = false, -- Disable animation
+        },
+      })
+    end
+  },
   { "neoclide/coc.nvim", branch = "release" },
   {
     'windwp/nvim-autopairs',
