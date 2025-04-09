@@ -39,7 +39,12 @@ function M.setup(opts)
   vim.api.nvim_set_keymap("n", "<Leader>p", ":lua require('fzf-lua').files()<CR>", { noremap = true, silent = true })
   vim.api.nvim_set_keymap("n", "<Leader>l", ":lua require('fzf-lua').buffers()<CR>", { noremap = true, silent = true })
   vim.api.nvim_set_keymap("n", "<Leader>ra", ":lua require('fzf-lua').live_grep()<CR>", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("n", "<Leader>rG", ":lua require('fzf-lua').grep_cWORD()<CR>", { noremap = true, silent = true })
   vim.api.nvim_set_keymap("n", "<Leader>rg", ":lua require('fzf-lua').grep_cword()<CR>", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("n", "<Leader>rr", ":lua require('fzf-lua').live_grep_glob()<CR>", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("n", "<Leader>rc", ":lua require('fzf-lua').git_commits()<CR>", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("n", "<Leader>rbc", ":lua require('fzf-lua').git_bcommits()<CR>", { noremap = true, silent = true })
+  vim.api.nvim_set_keymap("n", "<Leader>rl", ":lua require('fzf-lua').blines()<CR>", { noremap = true, silent = true })
 
   -- Browse tags in the buffer
   vim.api.nvim_set_keymap("n", "<Space>", ":lua require('fzf-lua').btags()<CR>", { noremap = true, silent = true })
