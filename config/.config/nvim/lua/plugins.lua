@@ -161,7 +161,6 @@ return {
   { "fei6409/log-highlight.nvim" },
 
   -- Colors and UI
-  { "gruvbox-community/gruvbox" },
   { "sainnhe/gruvbox-material" },
   { 
     "catppuccin/nvim", name = "catppuccin", priority = 1000,

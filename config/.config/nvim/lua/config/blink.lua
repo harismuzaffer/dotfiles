@@ -8,6 +8,7 @@ M.opts = {
   },
   fuzzy = { implementation = "prefer_rust_with_warning" },
   cmdline = { enabled = false },
+
   completion = {
     keyword = { range = 'full' },
 
@@ -35,9 +36,8 @@ M.opts = {
     },
 
     documentation = { auto_show = true, auto_show_delay_ms = 10 },
-
-    ghost_text = { enabled = true },
   },
+
   signature = { enabled = true }
 
 }
@@ -46,7 +46,7 @@ M.opts_extend = { "sources.default" }
 
 vim.lsp.enable {
   'pyright',
-    'rust-analyzer'
+  'rust-analyzer'
 }
 
 return M
