@@ -14,37 +14,6 @@ vim.cmd("colorscheme catppuccin")
 -- This is being overridden by the theme, so putting it after setting theme
 vim.cmd("hi Conceal guifg=#6c6c6c")
 
--- Required for fzf
-
--- FZF key mappings
-vim.api.nvim_set_keymap("n", "<C-P>", ":GFiles<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>p", ":Files<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>l", ":Buffers<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>ra", ":Rg<CR>", { noremap = true, silent = true })
-
--- Go to definition using fzf tags
-vim.api.nvim_set_keymap("n", "<Leader>gdd", ":Tags <C-R><C-W><CR>", { noremap = true, silent = true })
-
--- Find the word under cursor in all files
-vim.api.nvim_set_keymap("n", "<Leader>rg", ":Rg <C-R><C-W><CR>", { noremap = true, silent = true })
-
--- Browse tags in the buffer
-vim.api.nvim_set_keymap("n", "<Space>", ":BTags<CR>", { noremap = true, silent = true })
-
--- Browse tags in the project
-vim.api.nvim_set_keymap("n", "<Leader><Space>", ":Tags<CR>", { noremap = true, silent = true })
-
--- FZF Layout Configuration
-vim.g.fzf_layout = { window = { width = 0.97, height = 0.80 } }
-
-vim.env.FZF_DEFAULT_OPTS = "--preview-window 'right:50%:wrap' " ..
-    "--bind ctrl-y:preview-up,ctrl-e:preview-down," ..
-    "ctrl-b:preview-page-up,ctrl-f:preview-page-down," ..
-    "ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down," ..
-    "shift-up:preview-top,shift-down:preview-bottom," ..
-    "alt-up:half-page-up,alt-down:half-page-down"
--- Fzf configuration ends here
-
 vim.api.nvim_set_keymap("n", "<Leader>/", "<Plug>RgRawSearch -F \"\"<Left>", { noremap = false, silent = true })
 vim.api.nvim_set_keymap("v", "<Leader>/", "<Plug>RgRawVisualSelection", { noremap = false, silent = true })
 
