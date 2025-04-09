@@ -91,9 +91,38 @@ return {
   { "kkoomen/vim-doge" },
   {
     "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      require("ibl").setup()
-    end
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = { },
+    config = function(_, opts)
+      local highlight = {
+        "CursorColumn",
+        "Whitespace",
+      }
+      require("ibl").setup {
+        scope = { 
+          show_start = false,
+          show_end = false,
+          injected_languages = false,
+          highlight = { "Function", "Label" },
+          include = {
+            node_type = {
+              ["python"] = {
+                "if_statement",
+                "for_statement",
+                "while_statement",
+                "with_statement",
+                "try_statement",
+                "import_statement",
+                "import_from_statement",
+                "match_statement",
+              },
+            },
+          },
+        },
+      }
+    end,
   },
   {
     "f-person/git-blame.nvim",
