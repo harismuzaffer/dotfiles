@@ -1,7 +1,12 @@
 return {
   -- Productivity Plugins
-  { "junegunn/fzf" },
-  { "junegunn/fzf.vim" },
+  {
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("config.fzf").setup()
+    end
+  },
   { 
     "ludovicchabant/vim-gutentags", 
     config = function()
