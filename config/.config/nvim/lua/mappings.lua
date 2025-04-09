@@ -6,7 +6,7 @@ vim.opt.background = "dark"
 vim.g.gruvbox_material_background = "hard"
 vim.g.gruvbox_material_contrast_dark = "dark"
 vim.g.gruvbox_material_better_performance = 1
-vim.cmd("colorscheme gruvbox-material")
+vim.cmd("colorscheme catppuccin")
 
 -- This is being overridden by the theme, so putting it after setting theme
 vim.cmd("hi Conceal guifg=#6c6c6c")
