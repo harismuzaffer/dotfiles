@@ -52,7 +52,21 @@ return {
   { "github/copilot.vim" },
   { "robitx/gp.nvim" },
   {
-    "blink.cmp",
+    "saghen/blink.cmp",
+    dependencies = {
+      {
+        "xzbdmw/colorful-menu.nvim",
+        config = function()
+          require("config.colorful_menu").setup() -- Load your colorful-menu config
+        end,
+      },
+      {
+        "onsails/lspkind.nvim",
+        config = function()
+          require("config.lspkind").setup() -- Load your lspkind config
+        end,
+      },
+    },
     opts = function()
       local config = require("config.blink")
       return config.opts
@@ -61,6 +75,16 @@ return {
   },
 
   -- Syntax Plugins
+  {
+    'tzachar/local-highlight.nvim',
+    config = function()
+      require('local-highlight').setup({
+        animate = {
+          enabled = false, -- Disable animation
+        },
+      })
+    end
+  },
   { "neoclide/coc.nvim", branch = "release" },
   {
     'windwp/nvim-autopairs',
@@ -77,9 +101,38 @@ return {
   { "kkoomen/vim-doge" },
   {
     "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      require("ibl").setup()
-    end
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = { },
+    config = function(_, opts)
+      local highlight = {
+        "CursorColumn",
+        "Whitespace",
+      }
+      require("ibl").setup {
+        scope = { 
+          show_start = false,
+          show_end = false,
+          injected_languages = false,
+          highlight = { "Function", "Label" },
+          include = {
+            node_type = {
+              ["python"] = {
+                "if_statement",
+                "for_statement",
+                "while_statement",
+                "with_statement",
+                "try_statement",
+                "import_statement",
+                "import_from_statement",
+                "match_statement",
+              },
+            },
+          },
+        },
+      }
+    end,
   },
   {
     "f-person/git-blame.nvim",
@@ -118,7 +171,13 @@ return {
   { "fei6409/log-highlight.nvim" },
 
   -- Colors and UI
-  { "gruvbox-community/gruvbox" },
+  { "sainnhe/gruvbox-material" },
+  { 
+    "catppuccin/nvim", name = "catppuccin", priority = 1000,
+    config = function()
+      require('config.catppuccin').setup()
+    end
+  },
   {
     "nvim-lualine/lualine.nvim",
     config = function()
@@ -130,5 +189,5 @@ return {
     config = function()
       require("nvim-web-devicons").setup {}
     end
-  }
+  },
 }

@@ -2,9 +2,11 @@ local M = {}
 
 function M.setup()
   require'nvim-treesitter.configs'.setup {
+    ensure_installed = {"lua", "vimdoc", "markdown", "python", "rust" },
+    sync_install = false,
     highlight = {
       enable = true,
-      additional_vim_regex_highlighting = true,
+      additional_vim_regex_highlighting = false,
     },
     incremental_selection = {
       enable = true,

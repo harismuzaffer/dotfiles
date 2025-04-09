@@ -1,14 +1,18 @@
-vim.opt.background = "dark"
-vim.g.gruvbox_contrast_dark = "hard"
-vim.cmd("colorscheme gruvbox")
-
--- This is being overridden by the theme, so putting it after setting theme
-vim.cmd("hi Conceal guifg=#6c6c6c")
-
 -- Enable true color support if available
 if vim.fn.has("termguicolors") == 1 then
     vim.opt.termguicolors = true
 end
+vim.opt.background = "dark"
+vim.g.gruvbox_material_background = "hard"
+vim.g.gruvbox_material_contrast_dark = "dark"
+vim.g.gruvbox_material_better_performance = 1
+vim.g.gruvbox_material_enable_bold = 1
+vim.g.gruvbox_material_ui_contrast = "high"
+vim.g.gruvbox_material_float_style = 'dim'
+vim.cmd("colorscheme catppuccin")
+
+-- This is being overridden by the theme, so putting it after setting theme
+vim.cmd("hi Conceal guifg=#6c6c6c")
 
 -- Required for fzf
 
