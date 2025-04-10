@@ -9,7 +9,7 @@ vim.g.gruvbox_material_better_performance = 1
 vim.g.gruvbox_material_enable_bold = 1
 vim.g.gruvbox_material_ui_contrast = "high"
 vim.g.gruvbox_material_float_style = 'dim'
-vim.cmd("colorscheme catppuccin")
+vim.cmd("colorscheme kanagawa")
 
 -- This is being overridden by the theme, so putting it after setting theme
 vim.cmd("hi Conceal guifg=#6c6c6c")

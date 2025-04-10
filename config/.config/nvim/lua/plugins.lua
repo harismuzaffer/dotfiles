@@ -183,6 +183,12 @@ return {
       require('config.catppuccin').setup()
     end
   },
+  { 
+    "rebelot/kanagawa.nvim",
+    config = function()
+      require('config.kanagawa').setup()
+    end
+  },
   {
     "nvim-lualine/lualine.nvim",
     config = function()
