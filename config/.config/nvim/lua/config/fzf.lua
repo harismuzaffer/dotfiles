@@ -3,7 +3,7 @@ local M = {}
 function M.setup(opts)
   local default_opts = {
     winopts = {
-      row = 1,
+      row = 0.5,
       col = 0,
       width = 1,
       height = 0.8,
