@@ -25,6 +25,9 @@ function M.setup()
     overrides = function(colors)
       local theme = colors.theme
       return {
+        String = { fg = colors.palette.carpYellow, italic = true },
+        Search = { bg = colors.palette.fujiWhite, fg = colors.palette.sumiInk0 }, -- Brighter yellow background with dark text
+        Visual = { bg = colors.palette.waveBlue2 }, 
         Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },  -- add `blend = vim.o.pumblend` to enable transparency
         PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
         PmenuSbar = { bg = theme.ui.bg_m1 },
