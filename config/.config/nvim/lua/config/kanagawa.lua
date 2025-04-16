@@ -6,7 +6,7 @@ function M.setup()
     undercurl = true,            -- enable undercurls
     commentStyle = { italic = true },
     functionStyle = {bold = true},
-    keywordStyle = { italic = true},
+    keywordStyle = { bold = true},
     statementStyle = { bold = true },
     typeStyle = {bold = true},
     transparent = true,         -- do not set background color
