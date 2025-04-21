@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup()
   vim.g.gutentags_ctags_exclude = {
-    '*.git', '*.svg', '*.hg', '*/tests/*', 'build', 'dist',
+    '*.git', '*.svg', '*.hg', 'build', 'dist',
     '*sites/*/files/*', 'bin', 'node_modules', 'bower_components',
     'cache', 'compiled', 'docs', 'example', 'bundle', 'vendor',
     '*.md', '*-lock.json', '*.lock', '*bundle*.js', '*build*.js',
