@@ -67,7 +67,9 @@ color overflow			196	default
 # window dressing
 color title-blur		39	235	bold
 color title-focus		39	232	bold reverse
-color cursor			232	154	bold
+color cursor			232	70	bold
+color cursor-blur		232	70	bold
+color cursor-blur		232	70	bold
 color status			82	default
 
 # tree view
