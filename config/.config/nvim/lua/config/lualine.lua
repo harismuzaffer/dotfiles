@@ -21,14 +21,11 @@ function M.setup()
         },
       },
       lualine_x = {
-        function()
-          return require("nvim-treesitter").statusline({
-            indicator_size = 150,
-            type_patterns = { "class", "function", "method" },
-            separator = "  ",
-          })
-        end,
-        'filetype',
+        {
+          "navic",
+          color_correction = "dynamic", -- optional
+        },
+        "filetype",
       },
       lualine_y = {'%l:%c|%L', "progress"},
       lualine_z = {},

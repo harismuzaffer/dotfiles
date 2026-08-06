@@ -195,6 +195,12 @@ return {
       require('config.lualine').setup()
     end
   },
+  {
+    "SmiteshP/nvim-navic",
+    config = function()
+      require("config.navic").setup()
+    end,
+  },
   { 
     "kyazdani42/nvim-web-devicons",
     config = function()
