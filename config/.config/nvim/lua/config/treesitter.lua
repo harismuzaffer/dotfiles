@@ -1,47 +1,21 @@
 local M = {}
 
+local parsers = { "lua", "vimdoc", "markdown", "python", "rust" }
+
 function M.setup()
-  require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"lua", "vimdoc", "markdown", "python", "rust" },
-    sync_install = false,
-    highlight = {
-      enable = true,
-      additional_vim_regex_highlighting = false,
-    },
-    incremental_selection = {
-      enable = true,
-      keymaps = {
-        init_selection = "gnn",
-        node_incremental = "grn",
-        scope_incremental = "grc",
-        node_decremental = "grm",
-      },
-    },
-    refactor = {
-      smart_rename = {
-        enable = true,
-        keymaps = {
-          smart_rename = "grr",
-        },
-      },
-    },
-    autotag = {
-      enable = true,
-    },
-    textsubjects = {
-      enable = true,
-      keymaps = {
-        ['.'] = 'textsubjects-smart',
-        [';'] = 'textsubjects-container-outer',
-      }
-    },
-  }
-  -- Setup for treesitter-context
-  require('treesitter-context').setup {
-    enable = true,
-    throttle = true,
-    max_lines = 1,
-  }
+  require("nvim-treesitter").install(parsers)
+
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "lua", "markdown", "python", "rust" },
+    callback = function()
+      if not pcall(vim.treesitter.start) then
+        return
+      end
+      vim.wo.foldmethod = "expr"
+      vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
 end
 
 return M

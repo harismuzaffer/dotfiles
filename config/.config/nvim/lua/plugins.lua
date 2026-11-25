@@ -32,19 +32,12 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter',
+    lazy = false,
     build = ':TSUpdate',
     config = function()
       require('config.treesitter').setup()
     end,
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects',
-      'nvim-treesitter/nvim-treesitter-refactor',
-      'RRethy/nvim-treesitter-textsubjects',
-      'romgrk/nvim-treesitter-context',
-      'windwp/nvim-ts-autotag',
-    },
   },
-  { "RRethy/nvim-treesitter-textsubjects" },
   { "nvim-lua/plenary.nvim" },
   { 
     "ruifm/gitlinker.nvim",
