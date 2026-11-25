@@ -54,12 +54,12 @@ function show_documentation()
   end
 end
 
-vim.api.nvim_create_autocmd("CursorHold", {
-  pattern = "*",
-  callback = function()
-    vim.fn.CocActionAsync("highlight")
-  end,
-})
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--   pattern = "*",
+--   callback = function()
+--     vim.fn.CocActionAsync("highlight")
+--   end,
+-- })
 
 vim.cmd("highlight CocHighlightText guibg=#333333 guifg=#ffffff")
 -- Coc settings ends here
