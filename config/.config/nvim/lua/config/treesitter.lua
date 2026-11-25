@@ -1,6 +1,6 @@
 local M = {}
 
-local parsers = { "lua", "vimdoc", "markdown", "python", "rust" }
+local parsers = { "lua", "vimdoc", "markdown", "markdown_inline", "python", "rust" }
 
 function M.setup()
   require("nvim-treesitter").install(parsers)

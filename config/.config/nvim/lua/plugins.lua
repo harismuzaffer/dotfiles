@@ -38,6 +38,15 @@ return {
       require('config.treesitter').setup()
     end,
   },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    ft = "markdown",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    opts = {},
+  },
   { "nvim-lua/plenary.nvim" },
   { 
     "ruifm/gitlinker.nvim",
