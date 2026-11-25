@@ -4,7 +4,13 @@ return {
     "ibhagwan/fzf-lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
-      require("config.fzf").setup()
+      require("config.fzf").setup(
+        {
+          tags = {
+            absolute_path = true,
+          },
+        }
+      )
     end
   },
   { 
@@ -56,10 +62,9 @@ return {
   },
   { "rhysd/git-messenger.vim" },
   { "brooth/far.vim" },
-  { "github/copilot.vim" },
-  { "robitx/gp.nvim" },
   {
     "saghen/blink.cmp",
+    version = "1.*",
     dependencies = {
       {
         "xzbdmw/colorful-menu.nvim",
@@ -79,6 +84,12 @@ return {
       return config.opts
     end,
     opts_extend = require("config.blink").opts_extend,
+  },
+  {
+    "j-hui/fidget.nvim",
+    opts = {
+      -- options
+    },
   },
 
   -- Syntax Plugins

@@ -4,6 +4,9 @@
 -- Disable mouse completely
 vim.opt.mouse = ""
 
+-- enable Terminal Bidirectional text (BiDi) support
+vim.opt.termbidi = true
+
 -- To leave the cursor in the same column when using navigation keys
 vim.opt.startofline = false
 
