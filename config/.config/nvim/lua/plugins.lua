@@ -22,7 +22,13 @@ return {
   { "liuchengxu/vista.vim" },
   { "tpope/vim-fugitive" },
   { "psliwka/vim-smoothie" },
-  { "vimwiki/vimwiki" },
+  {
+    "vimwiki/vimwiki",
+    init = function()
+      -- keep .md files outside the wiki as markdown, not vimwiki
+      vim.g.vimwiki_global_ext = 0
+    end,
+  },
   { "adamheins/vim-highlight-match-under-cursor" },
   { "mhinz/vim-signify" },
   { "wfxr/minimap.vim" },
